@@ -1,0 +1,202 @@
+/* ==========================================================================
+   MAHRUKH GUL - LUXURY PREMIUM STYLES
+   ========================================================================== */
+
+/* --- Base Resets --- */
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for category strips but allow scrolling */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* --- Swiper Overrides --- */
+.swiper-button-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+.trending-swiper {
+    padding-bottom: 20px;
+}
+.trending-pagination .swiper-pagination-progressbar-fill,
+.couture-pagination .swiper-pagination-progressbar-fill {
+    background-color: #000 !important;
+}
+.trending-swiper .swiper-wrapper,
+.couture-swiper .swiper-wrapper {
+    transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+/* --- Luxury Header Animations & Styles --- */
+
+/* 1. Announcement Bar Marquee */
+.marquee-container {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+.marquee-content {
+    display: flex;
+    animation: scroll-marquee 25s linear infinite;
+    will-change: transform;
+}
+.marquee-item {
+    padding: 0 40px;
+    position: relative;
+}
+.marquee-item::after {
+    content: "•";
+    position: absolute;
+    right: 0;
+    color: #C7A86D;
+}
+.marquee-item:last-child::after {
+    display: none;
+}
+@keyframes scroll-marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* 2. Navigation Underline Hover Animation */
+.nav-link {
+    position: relative;
+    display: inline-block;
+    transition: color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: -4px;
+    left: 0;
+    background-color: #C7A86D;
+    transform-origin: center;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+}
+.nav-link:hover {
+    color: #C7A86D;
+}
+.nav-link:hover::after {
+    transform: scaleX(1);
+}
+
+/* 3. Header States */
+#header-wrapper {
+    will-change: box-shadow;
+}
+
+/* 4. Micro-Interactions */
+.logo-text {
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), letter-spacing 0.6s ease;
+    display: inline-block;
+    will-change: transform;
+}
+.logo-text:hover {
+    transform: scale(1.02);
+}
+.icon-btn {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), color 0.3s ease;
+    will-change: transform, color;
+}
+.icon-btn:hover {
+    transform: translateY(-2px);
+    color: #C7A86D;
+}
+
+/* 5. Mega Menu */
+.mega-menu {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), visibility 0.4s;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background-color: rgba(255, 255, 255, 0.98);
+    will-change: opacity, transform;
+}
+.nav-item:hover .mega-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* 6. Mobile Drawer */
+#mobile-drawer {
+    visibility: hidden;
+}
+#mobile-drawer.active {
+    visibility: visible;
+}
+
+/* 7. Luxury Hero Slider */
+.hero-swiper {
+    width: 100%;
+    height: 100%;
+}
+.hero-slide-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform;
+    transform: scale(1);
+}
+.swiper-slide-active .hero-slide-bg {
+    transform: scale(1.05); /* Ken Burns Effect */
+}
+.hero-text-1, .hero-text-2, .hero-text-3 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: opacity, transform;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.4);
+}
+.swiper-slide-active .hero-text-1 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.4s;
+}
+.swiper-slide-active .hero-text-2 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.6s;
+}
+.swiper-slide-active .hero-text-3 {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.8s;
+}
+/* Luxury Pagination Lines */
+.hero-swiper .swiper-pagination-progressbar {
+    background: rgba(255, 255, 255, 0.2);
+    height: 3px;
+    bottom: 0 !important;
+    top: auto !important;
+}
+.hero-swiper .swiper-pagination-progressbar-fill {
+    background: #C7A86D;
+}
+
+/* 8. Infinite Auto Slider */
+.summer-sale-swiper .swiper-wrapper {
+    transition-timing-function: linear !important;
+}

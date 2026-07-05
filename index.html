@@ -1,0 +1,1698 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAHRUKH GUL - Luxury Premium Fashion</title>
+
+    <!-- Google Fonts: Space Grotesk for sans, Cormorant Garamond for serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#111111',
+                            gold: '#C7A86D',
+                            text: '#222222',
+                            gray: '#f5f5f5',
+                            border: '#e5e5e5',
+                            red: '#e53e3e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    maxWidth: {
+                        'container': '1440px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-brand-text bg-white antialiased overflow-x-hidden">
+
+    <!-- WP: Luxury Header Wrapper -->
+    <div id="header-wrapper" class="sticky top-0 w-full z-50 flex flex-col bg-white transition-shadow duration-300">
+
+        <!-- WP: Announcement Bar -->
+        <div
+            class="h-[36px] w-full bg-[#111111] border-b border-[#C7A86D]/30 text-[#C7A86D] text-[10px] tracking-[0.2em] uppercase overflow-hidden relative flex items-center">
+            <div class="marquee-container w-full min-w-0">
+                <div class="marquee-content font-medium">
+                    <span class="marquee-item">Complimentary Worldwide Shipping</span>
+                    <span class="marquee-item">New Luxury Collection Available</span>
+                    <span class="marquee-item">Premium Packaging Included</span>
+                    <span class="marquee-item">Easy Returns</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="marquee-item">Complimentary Worldwide Shipping</span>
+                    <span class="marquee-item">New Luxury Collection Available</span>
+                    <span class="marquee-item">Premium Packaging Included</span>
+                    <span class="marquee-item">Easy Returns</span>
+                </div>
+            </div>
+        </div>
+        <!-- /WP: Announcement Bar -->
+
+        <!-- WP: Main Header -->
+        <header id="main-header" class="w-full flex flex-col">
+            <!-- Top Logo & Icons Row -->
+            <div class="max-w-container mx-auto px-6 w-full flex items-center justify-between h-[80px] md:h-[100px]">
+
+                <!-- Left: Hamburger & Search -->
+                <div class="flex items-center gap-6 w-1/3 text-xl">
+                    <button id="mobile-menu-trigger" class="icon-btn lg:hidden hover:text-[#C7A86D]"><i
+                            class="ph ph-list"></i></button>
+                    <button class="icon-btn hidden md:block hover:text-[#C7A86D]"><i
+                            class="ph ph-magnifying-glass"></i></button>
+                </div>
+
+                <!-- Center: Luxury Logo -->
+                <div class="w-1/3 flex justify-center">
+                    <a href="#"
+                        class="logo-text text-center text-3xl md:text-[42px] font-medium tracking-[0.3em] uppercase font-serif text-brand-black leading-tight">
+                        MAHRUKH GUL
+                    </a>
+                </div>
+
+                <!-- Right: Icons -->
+                <div class="w-1/3 flex justify-end items-center gap-6 text-xl">
+                    <button class="icon-btn hidden md:block"><i class="ph ph-user"></i></button>
+                    <button class="icon-btn hidden md:block"><i class="ph ph-heart"></i></button>
+                    <button class="icon-btn relative">
+                        <i class="ph ph-bag"></i>
+                        <span
+                            class="absolute -top-1 -right-2 bg-[#C7A86D] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav
+                class="hidden lg:flex justify-center h-[50px] items-center text-[11px] tracking-[0.25em] font-medium uppercase border-b border-[#e5e5e5]/20">
+                <ul class="flex gap-10 h-full items-center">
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">New Arrivals</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center group">
+                        <a href="#" class="nav-link flex items-center gap-1">Unstitched <i
+                                class="ph ph-caret-down text-[#C7A86D] text-[10px] font-bold"></i></a>
+
+                        <!-- Mega Menu Dropdown -->
+                        <div
+                            class="mega-menu absolute top-[100%] left-0 w-full h-[400px] border-b border-[#e5e5e5]/50 shadow-xl flex z-40">
+                            <div class="max-w-container mx-auto w-full flex gap-8 p-12">
+                                <!-- Editorial Banner -->
+                                <div class="w-1/3 relative h-full group/banner overflow-hidden cursor-pointer">
+                                    <img src="./images/pakistani_unstitched_1783255529516.png"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover/banner:scale-105">
+                                    <div class="absolute inset-0 bg-black/20"></div>
+                                    <h3 class="absolute bottom-6 left-6 text-white text-2xl font-serif tracking-widest">
+                                        The Lawn Edit</h3>
+                                </div>
+                                <!-- Links -->
+                                <div class="w-1/4 flex flex-col gap-4">
+                                    <h4 class="text-[10px] text-gray-400 font-bold tracking-[0.3em] uppercase mb-2">
+                                        Categories</h4>
+                                    <a href="#" class="text-xs hover:text-[#C7A86D] transition-colors">Embroidered
+                                        Lawn</a>
+                                    <a href="#" class="text-xs hover:text-[#C7A86D] transition-colors">Printed Lawn</a>
+                                    <a href="#" class="text-xs hover:text-[#C7A86D] transition-colors">Chiffon
+                                        Dupatta</a>
+                                    <a href="#" class="text-xs hover:text-[#C7A86D] transition-colors">Silk Dupatta</a>
+                                    <a href="#" class="text-xs text-[#C7A86D] font-bold mt-4">View All Unstitched</a>
+                                </div>
+                                <!-- Featured Products -->
+                                <div class="w-5/12 grid grid-cols-2 gap-4">
+                                    <div class="h-full">
+                                        <img src="./images/pakistani_ready_to_wear_1783255538660.png"
+                                            class="w-full h-[80%] object-cover mb-2">
+                                        <p class="text-[10px] tracking-widest font-bold">Midnight Bloom</p>
+                                    </div>
+                                    <div class="h-full">
+                                        <img src="./images/pakistani_kids_1783255560247.png"
+                                            class="w-full h-[80%] object-cover mb-2">
+                                        <p class="text-[10px] tracking-widest font-bold">Emerald Dream</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">Ready To Wear</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">Luxury Pret</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">Formals</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">Bridal</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="#" class="nav-link text-[#C7A86D] font-bold">Sale</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /WP: Main Header -->
+    </div>
+    <!-- /WP: Luxury Header Wrapper -->
+
+    <!-- WP: Mobile Drawer -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[60] w-full h-screen">
+        <!-- Overlay -->
+        <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0"></div>
+
+        <!-- Drawer Content -->
+        <div id="drawer-content"
+            class="absolute top-0 left-0 w-[85%] max-w-[400px] h-full bg-white shadow-2xl flex flex-col transform -translate-x-full">
+            <!-- Drawer Header -->
+            <div class="flex justify-between items-center p-6 border-b border-[#e5e5e5]">
+                <span class="font-serif tracking-[0.2em] font-medium text-lg">MAHRUKH GUL</span>
+                <button id="drawer-close" class="text-2xl hover:text-[#C7A86D] transition-colors"><i
+                        class="ph ph-x"></i></button>
+            </div>
+            <!-- Drawer Links -->
+            <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 text-sm tracking-[0.2em] font-medium uppercase">
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">New Arrivals</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Unstitched</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Ready To Wear</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Luxury Pret</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Formals</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Bridal</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors">Accessories</a>
+                <a href="#" class="text-[#C7A86D] font-bold">Sale</a>
+
+                <hr class="border-[#e5e5e5] my-2">
+                <a href="#" class="hover:text-[#C7A86D] transition-colors flex items-center gap-2"><i
+                        class="ph ph-user text-lg"></i> Account</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors flex items-center gap-2"><i
+                        class="ph ph-heart text-lg"></i> Wishlist</a>
+            </div>
+        </div>
+    </aside>
+    <!-- /WP: Mobile Drawer -->
+
+    <!-- MAIN CONTENT -->
+    <main>
+
+        <!-- WP: Hero Slider -->
+        <section class="w-full h-[60vh] md:h-[85vh] relative">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide relative overflow-hidden">
+                        <img src="./images/pakistani_hero_banner_1783255517941.png" alt="Luxury Collection"
+                            class="hero-slide-bg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+                        <div
+                            class="hero-overlay-content absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                            <span
+                                class="hero-text-1 text-[9px] md:text-[11px] tracking-[0.5em] uppercase font-medium mb-6 text-[#C7A86D]">New
+                                Arrivals</span>
+                            <h2
+                                class="hero-text-2 font-serif text-5xl md:text-7xl lg:text-8xl mb-12 tracking-widest font-light leading-none">
+                                The Royal<br>Symphony</h2>
+                            <a href="#"
+                                class="hero-text-3 group relative text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold text-white">
+                                Discover Now
+                                <span
+                                    class="absolute -bottom-3 left-1/2 w-0 h-[1px] bg-[#C7A86D] transition-all duration-700 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide relative overflow-hidden">
+                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Bridal Couture"
+                            class="hero-slide-bg">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+                        <div
+                            class="hero-overlay-content absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                            <span
+                                class="hero-text-1 text-[9px] md:text-[11px] tracking-[0.5em] uppercase font-medium mb-6 text-[#C7A86D]">Bridal
+                                2026</span>
+                            <h2
+                                class="hero-text-2 font-serif text-5xl md:text-7xl lg:text-8xl mb-12 tracking-widest font-light leading-none">
+                                Ethereal<br>Elegance</h2>
+                            <a href="#"
+                                class="hero-text-3 group relative text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold text-white">
+                                Shop Bridal
+                                <span
+                                    class="absolute -bottom-3 left-1/2 w-0 h-[1px] bg-[#C7A86D] transition-all duration-700 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide relative overflow-hidden">
+                        <img src="./images/pakistani_unstitched_1783255529516.png" alt="Unstitched Edition"
+                            class="hero-slide-bg object-top">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/30"></div>
+                        <div
+                            class="hero-overlay-content absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+                            <span
+                                class="hero-text-1 text-[9px] md:text-[11px] tracking-[0.5em] uppercase font-medium mb-6 text-[#C7A86D]">Summer
+                                Edit</span>
+                            <h2
+                                class="hero-text-2 font-serif text-5xl md:text-7xl lg:text-8xl mb-12 tracking-widest font-light leading-none">
+                                Unstitched<br>Luxury</h2>
+                            <a href="#"
+                                class="hero-text-3 group relative text-[10px] md:text-xs tracking-[0.4em] uppercase font-bold text-white">
+                                Explore Collection
+                                <span
+                                    class="absolute -bottom-3 left-1/2 w-0 h-[1px] bg-[#C7A86D] transition-all duration-700 ease-in-out group-hover:w-full group-hover:left-0"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Progress Bar Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <!-- /WP: Hero Slider -->
+
+        <!-- WP: Summer Sale Category Strip -->
+        <section class="w-full overflow-hidden py-12">
+            <div class="max-w-container mx-auto px-4 mb-8">
+                <h2 class="text-3xl md:text-5xl font-bold mb-2 flex items-center gap-3">Summer Sale <span
+                        class="text-3xl md:text-4xl">🔥</span></h2>
+                <p class="text-sm md:text-base text-gray-500 font-medium">Don't Miss Out on amazing discounts! ✨</p>
+            </div>
+            <div class="swiper summer-sale-swiper pb-4">
+                <div class="swiper-wrapper">
+
+                    <a href="#"
+                        class="swiper-slide relative group overflow-hidden rounded-md block !w-[85vw] md:!w-[371.875px] !h-[400px] md:!h-[425px]">
+                        <img src="./images/pakistani_unstitched_1783255529516.png" alt="Sale"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 transition-colors duration-500"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+                            <span
+                                class="text-xs md:text-sm font-sans tracking-[0.2em] uppercase mb-2 drop-shadow-md">Summer
+                                Sale</span>
+                            <div
+                                class="font-serif text-5xl md:text-6xl tracking-widest text-center leading-none drop-shadow-md">
+                                <span
+                                    class="text-sm md:text-lg font-sans tracking-widest uppercase align-top">UPTO</span>
+                                50%
+                                <span
+                                    class="text-xl md:text-2xl font-sans tracking-normal uppercase align-bottom">OFF</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 w-full py-[24px] px-[26px] flex justify-between items-center text-white z-10 transition-all duration-500 bg-transparent group-hover:bg-black/40 group-hover:backdrop-blur-md">
+                            <span
+                                class="text-[20px] leading-[20px] font-medium tracking-wide drop-shadow-md">Unstitched</span>
+                            <i
+                                class="ph ph-arrow-up-right text-[24px] leading-[24px] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="swiper-slide relative group overflow-hidden rounded-md block !w-[85vw] md:!w-[371.875px] !h-[400px] md:!h-[425px]">
+                        <img src="./images/pakistani_ready_to_wear_1783255538660.png" alt="Sale"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 transition-colors duration-500"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+                            <span
+                                class="text-xs md:text-sm font-sans tracking-[0.2em] uppercase mb-2 drop-shadow-md">Summer
+                                Sale</span>
+                            <div
+                                class="font-serif text-5xl md:text-6xl tracking-widest text-center leading-none drop-shadow-md">
+                                <span
+                                    class="text-sm md:text-lg font-sans tracking-widest uppercase align-top">UPTO</span>
+                                30%
+                                <span
+                                    class="text-xl md:text-2xl font-sans tracking-normal uppercase align-bottom">OFF</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 w-full py-[24px] px-[26px] flex justify-between items-center text-white z-10 transition-all duration-500 bg-transparent group-hover:bg-black/40 group-hover:backdrop-blur-md">
+                            <span class="text-[20px] leading-[20px] font-medium tracking-wide drop-shadow-md">Ready to
+                                Wear</span>
+                            <i
+                                class="ph ph-arrow-up-right text-[24px] leading-[24px] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="swiper-slide relative group overflow-hidden rounded-md block !w-[85vw] md:!w-[371.875px] !h-[400px] md:!h-[425px]">
+                        <img src="./images/pakistani_kids_1783255560247.png" alt="Sale"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 transition-colors duration-500"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+                            <span
+                                class="text-xs md:text-sm font-sans tracking-[0.2em] uppercase mb-2 drop-shadow-md">Summer
+                                Sale</span>
+                            <div
+                                class="font-serif text-5xl md:text-6xl tracking-widest text-center leading-none drop-shadow-md">
+                                <span
+                                    class="text-sm md:text-lg font-sans tracking-widest uppercase align-top">UPTO</span>
+                                50%
+                                <span
+                                    class="text-xl md:text-2xl font-sans tracking-normal uppercase align-bottom">OFF</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 w-full py-[24px] px-[26px] flex justify-between items-center text-white z-10 transition-all duration-500 bg-transparent group-hover:bg-black/40 group-hover:backdrop-blur-md">
+                            <span
+                                class="text-[20px] leading-[20px] font-medium tracking-wide drop-shadow-md">Kids</span>
+                            <i
+                                class="ph ph-arrow-up-right text-[24px] leading-[24px] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="swiper-slide relative group overflow-hidden rounded-md block !w-[85vw] md:!w-[371.875px] !h-[400px] md:!h-[425px]">
+                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Sale"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 transition-colors duration-500"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+                            <span
+                                class="text-xs md:text-sm font-sans tracking-[0.2em] uppercase mb-2 drop-shadow-md">Summer
+                                Sale</span>
+                            <div
+                                class="font-serif text-5xl md:text-6xl tracking-widest text-center leading-none drop-shadow-md">
+                                <span
+                                    class="text-sm md:text-lg font-sans tracking-widest uppercase align-top">UPTO</span>
+                                20%
+                                <span
+                                    class="text-xl md:text-2xl font-sans tracking-normal uppercase align-bottom">OFF</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 w-full py-[24px] px-[26px] flex justify-between items-center text-white z-10 transition-all duration-500 bg-transparent group-hover:bg-black/40 group-hover:backdrop-blur-md">
+                            <span class="text-[20px] leading-[20px] font-medium tracking-wide drop-shadow-md">Luxury
+                                Formals</span>
+                            <i
+                                class="ph ph-arrow-up-right text-[24px] leading-[24px] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </div>
+                    </a>
+
+                    <a href="#"
+                        class="swiper-slide relative group overflow-hidden rounded-md block !w-[85vw] md:!w-[371.875px] !h-[400px] md:!h-[425px]">
+                        <img src="./images/pakistani_unstitched_1783255529516.png" alt="Sale"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/20 transition-colors duration-500"></div>
+
+                        <div
+                            class="absolute inset-0 flex flex-col items-center justify-center text-white pointer-events-none">
+                            <span
+                                class="text-xs md:text-sm font-sans tracking-[0.2em] uppercase mb-2 drop-shadow-md">Summer
+                                Sale</span>
+                            <div
+                                class="font-serif text-5xl md:text-6xl tracking-widest text-center leading-none drop-shadow-md">
+                                <span
+                                    class="text-sm md:text-lg font-sans tracking-widest uppercase align-top">UPTO</span>
+                                40%
+                                <span
+                                    class="text-xl md:text-2xl font-sans tracking-normal uppercase align-bottom">OFF</span>
+                            </div>
+                        </div>
+
+                        <div
+                            class="absolute bottom-0 left-0 right-0 w-full py-[24px] px-[26px] flex justify-between items-center text-white z-10 transition-all duration-500 bg-transparent group-hover:bg-black/40 group-hover:backdrop-blur-md">
+                            <span
+                                class="text-[20px] leading-[20px] font-medium tracking-wide drop-shadow-md">Accessories</span>
+                            <i
+                                class="ph ph-arrow-up-right text-[24px] leading-[24px] opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1"></i>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+        <!-- /WP: Summer Sale Category Strip -->
+
+        <!-- WP: 2-Column Featured Section -->
+        <section class="max-w-container mx-auto px-4 pb-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <a href="#"
+                    class="block relative group overflow-hidden rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/5] md:aspect-[3/4]">
+                    <img src="./images/pakistani_unstitched_1783255529516.png" alt="Collection"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center w-full uppercase tracking-[0.25em] text-[20px] md:text-[28px] font-medium drop-shadow-md">
+                        Ready To Wear
+                    </div>
+                </a>
+                <a href="#"
+                    class="block relative group overflow-hidden rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[4/5] md:aspect-[3/4]">
+                    <img src="./images/pakistani_ready_to_wear_1783255538660.png" alt="Collection"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-black/20 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center w-full uppercase tracking-[0.25em] text-[20px] md:text-[28px] font-medium drop-shadow-md">
+                        Unstitched
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- /WP: 2-Column Featured Section -->
+
+        <!-- WP: 3-Column Featured Section -->
+        <section class="max-w-container mx-auto px-4 pb-16">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+                <a href="#"
+                    class="block relative group overflow-hidden rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] md:aspect-[2/3]">
+                    <img src="./images/pakistani_bridal_1783255548960.png" alt="Category"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center w-full uppercase tracking-[0.25em] text-[20px] md:text-[28px] font-medium drop-shadow-md">
+                        Couture
+                    </div>
+                </a>
+                <a href="#"
+                    class="block relative group overflow-hidden rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] md:aspect-[2/3]">
+                    <img src="./images/pakistani_hero_banner_1783255517941.png" alt="Category"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center w-full uppercase tracking-[0.25em] text-[20px] md:text-[28px] font-medium drop-shadow-md">
+                        Bridal
+                    </div>
+                </a>
+                <a href="#"
+                    class="block relative group overflow-hidden rounded-[12px] shadow-sm hover:shadow-xl transition-all duration-500 aspect-[3/4] md:aspect-[2/3]">
+                    <img src="./images/pakistani_unstitched_1783255529516.png" alt="Category"
+                        class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/5 group-hover:bg-black/10 transition-colors duration-500">
+                    </div>
+                    <div
+                        class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white text-center w-full uppercase tracking-[0.25em] text-[20px] md:text-[28px] font-medium drop-shadow-md">
+                        Formal
+                    </div>
+                </a>
+            </div>
+        </section>
+        <!-- /WP: 3-Column Featured Section -->
+
+        <!-- WP: Most Trending -->
+        <section class="w-full pb-16 pt-8 mb-8">
+            <!-- Header -->
+            <div class="max-w-container mx-auto px-4 mb-6">
+                <h2 class="text-3xl md:text-4xl tracking-tight uppercase mb-4 text-black">Most Trending</h2>
+                <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+                    <!-- Tabs -->
+                    <div class="flex gap-4 md:gap-6 text-[13px] font-medium uppercase overflow-x-auto w-full md:w-auto pb-2 md:pb-0 no-scrollbar text-gray-500 tracking-wider">
+                        <button class="trending-tab border-b-[1.5px] border-black text-black pb-1 whitespace-nowrap" data-filter="new-arrivals">New Arrivals</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="luxury-pret">Luxury Pret</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="luxury-formals">Luxury Formals</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="kidswear">Kidswear</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="unstitched">Unstitched</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="m-luxe-fabrics">M.Luxe Fabrics</button>
+                        <button class="trending-tab hover:text-black transition-colors whitespace-nowrap" data-filter="accessories">Accessories</button>
+                    </div>
+
+                    <!-- Controls -->
+                    <div class="hidden md:flex items-center gap-4 shrink-0">
+                        <a href="#"
+                            class="text-[13px] text-black border-b border-black pb-0.5 hover:text-gray-600 transition-colors uppercase font-medium">View
+                            all</a>
+                        <div class="flex gap-2">
+                            <button class="trending-prev text-gray-400 hover:text-black transition-colors"><i
+                                    class="ph ph-arrow-left text-lg"></i></button>
+                            <button class="trending-next text-black hover:text-gray-600 transition-colors"><i
+                                    class="ph ph-arrow-right text-lg"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product Slider -->
+            <div class="w-full pl-4 2xl:pl-[calc((100vw-1440px)/2+16px)]">
+                <div class="swiper trending-swiper relative pb-6 !overflow-visible">
+                    <div class="swiper-wrapper">
+                    <!-- Product 1 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_pret_1783285387396.png" alt="Midnight Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Midnight Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.18,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_formal_1783285376360.png" alt="Pastel Silver Anarkali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Pastel Silver Anarkali</p>
+                                <p class="text-[16px] font-bold text-black">Rs.45,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/pakistani_bridal_1783255548960.png" alt="3 Piece Embroidered Bamberg Raw Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">3 Piece Embroidered Bamberg Raw Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.15,990</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 4 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_pret_1783285387396.png" alt="Midnight Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Midnight Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.18,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_formal_1783285376360.png" alt="Pastel Silver Anarkali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Pastel Silver Anarkali</p>
+                                <p class="text-[16px] font-bold text-black">Rs.45,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/pakistani_bridal_1783255548960.png" alt="3 Piece Embroidered Bamberg Raw Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">3 Piece Embroidered Bamberg Raw Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.15,990</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Product 7 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_pret_1783285387396.png" alt="Midnight Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Midnight Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.18,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/luxury_formal_1783285376360.png" alt="Pastel Silver Anarkali" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Pastel Silver Anarkali</p>
+                                <p class="text-[16px] font-bold text-black">Rs.45,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 (Duplicated) -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="new-arrivals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/pakistani_bridal_1783255548960.png" alt="3 Piece Embroidered Bamberg Raw Silk Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">3 Piece Embroidered Bamberg Raw Silk Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.15,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 4 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-pret">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Trending</span>
+                                <img src="./images/pakistani_ready_to_wear_1783255538660.png" alt="3 Piece Embroidered Organza Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">3 Piece Embroidered Organza Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.13,590</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 5 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-pret">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Popular</span>
+                                <img src="./images/luxury_pret_1783285387396.png" alt="Midnight Silk Printed Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Midnight Silk Printed Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.18,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 6 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-pret">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/pakistani_unstitched_1783255529516.png" alt="2 Piece Dobby Lawn Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">2 Piece Dobby Lawn Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.7,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 7 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-formals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Luxury</span>
+                                <img src="./images/luxury_formal_1783285376360.png" alt="Premium Silver Anarkali Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Premium Silver Anarkali Set</p>
+                                <p class="text-[16px] font-bold text-black">Rs.45,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 8 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-formals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Bestseller</span>
+                                <img src="./images/pakistani_bridal_1783255548960.png" alt="Heavy Embroidered Bridal Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Heavy Embroidered Bridal Set</p>
+                                <p class="text-[16px] font-bold text-black">Rs.250,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 9 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="luxury-formals">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Exclusive</span>
+                                <img src="./images/pakistani_hero_banner_1783255517941.png" alt="Monochrome Handcrafted Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Monochrome Handcrafted Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.85,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 10 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="kidswear">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/pakistani_kids_1783255560247.png" alt="2 Piece Embroidered Dobby Lawn Kids Suit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">2 Piece Embroidered Dobby Lawn Kids Suit</p>
+                                <p class="text-[16px] font-bold text-black">Rs.7,990</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 11 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="kidswear">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Trending</span>
+                                <img src="./images/pakistani_kids_1783255560247.png" alt="Festive Green Kidswear Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Festive Green Kidswear Set</p>
+                                <p class="text-[16px] font-bold text-black">Rs.8,500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 12 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="unstitched">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Summer</span>
+                                <img src="./images/pakistani_unstitched_1783255529516.png" alt="3 Piece Unstitched Lawn Collection" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">3 Piece Unstitched Lawn Collection</p>
+                                <p class="text-[16px] font-bold text-black">Rs.6,500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 13 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="unstitched">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/fabric_detail_1783285329113.png" alt="Unstitched Premium Emerald Silk" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Unstitched Premium Emerald Silk</p>
+                                <p class="text-[16px] font-bold text-black">Rs.12,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 14 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="m-luxe-fabrics">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Premium</span>
+                                <img src="./images/fabric_detail_1783285329113.png" alt="Raw Silk Fabric By Yard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Raw Silk Fabric By Yard</p>
+                                <p class="text-[16px] font-bold text-black">Rs.3,500</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 15 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="m-luxe-fabrics">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Bestseller</span>
+                                <img src="./images/fabric_detail_1783285329113.png" alt="Emerald Velvet With Zardozi" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Emerald Velvet With Zardozi</p>
+                                <p class="text-[16px] font-bold text-black">Rs.5,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 16 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="accessories">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">Luxury</span>
+                                <img src="./images/accessories_detail_1783285365387.png" alt="Bridal Kundan Jewelry Set" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Bridal Kundan Jewelry Set</p>
+                                <p class="text-[16px] font-bold text-black">Rs.35,000</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 17 -->
+                    <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[273.8px]" data-category="accessories">
+                        <div class="group cursor-pointer">
+                            <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                <span class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10">New</span>
+                                <img src="./images/accessories_detail_1783285365387.png" alt="Embellished Golden Potli Bag" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                                <div class="absolute bottom-3 left-3 right-3 bg-white/95 backdrop-blur-sm rounded-[6px] flex items-center justify-between p-3 translate-y-[120%] opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300 shadow-md">
+                                    <span class="text-xs font-medium">View Details &rarr;</span>
+                                    <div class="flex items-center gap-3">
+                                        <button class="hover:text-gray-600"><i class="ph ph-corners-out text-lg"></i></button>
+                                        <button class="hover:text-red-500"><i class="ph ph-heart text-lg"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="px-1">
+                                <p class="text-[14px] font-medium text-black mb-1 line-clamp-2">Embellished Golden Potli Bag</p>
+                                <p class="text-[16px] font-bold text-black">Rs.15,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Progress Bar -->
+                <div
+                    class="swiper-pagination trending-pagination hidden md:block !relative mt-6 h-[2px] w-[calc(100%-1rem)] 2xl:w-[calc(1440px-2rem)] bg-gray-200 overflow-hidden">
+                </div>
+            </div>
+
+            <!-- Mobile View All Button -->
+            <div class="mt-8 flex justify-center md:hidden px-4">
+                <a href="#" class="text-[13px] text-black border-b border-black pb-0.5 hover:text-gray-600 transition-colors uppercase font-medium tracking-widest">View all</a>
+            </div>
+        </section>
+        <!-- /WP: Most Trending -->
+
+        <!-- WP: Luxury Premium Section -->
+        <section class="max-w-container mx-auto px-4 pt-4 pb-10 lg:pb-20 mb-4 lg:mb-16 relative overflow-hidden">
+            <!-- Large Background Text -->
+            <div
+                class="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full text-center z-0 pointer-events-none opacity-[0.03]">
+                <span class="text-[12vw] font-black uppercase tracking-tighter text-black">LUXURY</span>
+            </div>
+
+            <div class="relative z-10 flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+                <!-- Left Side: Image Composition -->
+                <div class="w-full lg:w-1/2 relative">
+                    <div
+                        class="relative z-10 w-[85%] md:w-[75%] aspect-[4/5] overflow-hidden group rounded-tr-[80px] rounded-bl-[80px] shadow-2xl mx-auto lg:mx-0">
+                        <img src="./images/pakistani_hero_banner_1783255517941.png" alt="Luxury Premium"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-[2000ms] ease-out">
+                        <div
+                            class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-1000">
+                        </div>
+                    </div>
+                    <!-- Accent Image overlaying -->
+                    <div
+                        class="absolute -bottom-12 right-0 md:right-10 lg:-right-4 w-[50%] md:w-[45%] aspect-[3/4] z-20 overflow-hidden border-8 border-white shadow-xl group">
+                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Luxury Details"
+                            class="w-full h-full object-cover object-top group-hover:scale-110 transition-transform duration-[2000ms] ease-out">
+                    </div>
+                    <!-- Decorative Element -->
+                    <div
+                        class="absolute top-10 left-0 md:left-10 lg:-left-6 w-32 h-32 border border-[#C7A86D] rounded-full z-0 animate-pulse">
+                    </div>
+                </div>
+
+                <!-- Right Side: Content -->
+                <div class="w-full lg:w-1/2 pt-16 lg:pt-0 text-center lg:text-left">
+                    <div class="inline-flex items-center justify-center lg:justify-start gap-4 mb-8 w-full lg:w-auto">
+                        <div class="w-12 h-[2px] bg-[#C7A86D]"></div>
+                        <span class="text-[12px] font-bold tracking-[0.3em] text-[#C7A86D] uppercase">Signature
+                            Edition</span>
+                        <div class="w-12 h-[2px] bg-[#C7A86D] lg:hidden"></div>
+                    </div>
+
+                    <h2
+                        class="text-4xl md:text-5xl lg:text-6xl font-light text-black uppercase tracking-wide leading-[1.2] mb-8">
+                        The Epitome of <br>
+                        <span class="font-bold">Couture</span>
+                    </h2>
+
+                    <p class="text-gray-500 text-[15px] leading-[1.8] mb-12 max-w-lg mx-auto lg:mx-0">
+                        Experience unparalleled craftsmanship. Our latest collection brings together timeless traditions
+                        and modern aesthetics to create pieces that are truly unforgettable. Elevate your wardrobe with
+                        intricate embroideries and premium fabrics.
+                    </p>
+
+                    <a href="#"
+                        class="group relative inline-flex items-center justify-center px-12 py-4 bg-black text-white text-[13px] font-bold tracking-[0.2em] uppercase overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500">
+                        <span
+                            class="absolute inset-0 w-0 bg-[#C7A86D] transition-all duration-[600ms] ease-out group-hover:w-full z-0"></span>
+                        <span
+                            class="relative z-10 group-hover:text-black transition-colors duration-[600ms] flex items-center gap-3">
+                            Explore Collection
+                            <i class="ph ph-arrow-right text-lg"></i>
+                        </span>
+                    </a>
+
+                    <!-- Statistics/Details -->
+                    <div class="grid grid-cols-2 gap-8 mt-16 pt-8 border-t border-gray-200">
+                        <div class="group cursor-default">
+                            <h4
+                                class="text-4xl font-light text-black mb-2 group-hover:text-[#C7A86D] transition-colors duration-300">
+                                100<span class="text-[#C7A86D]">+</span></h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Unique Designs</p>
+                        </div>
+                        <div class="group cursor-default">
+                            <h4
+                                class="text-4xl font-light text-black mb-2 group-hover:text-[#C7A86D] transition-colors duration-300">
+                                100<span class="text-[#C7A86D]">%</span></h4>
+                            <p class="text-xs text-gray-500 uppercase tracking-widest font-bold">Premium Fabric</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /WP: Luxury Premium Section -->
+
+        <!-- WP: Couture Slider Section -->
+        <section class="w-full pb-16 pt-2 lg:pt-8 overflow-hidden">
+            <div class="flex flex-col lg:flex-row h-full">
+                <!-- Left Full Height Image -->
+                <div class="w-full lg:w-[35%] xl:w-[30%] h-[450px] md:h-[600px] lg:h-auto px-4 lg:px-0 relative group">
+                    <div class="w-full h-full relative overflow-hidden rounded-[2px] lg:rounded-none shadow-[0_20px_50px_rgba(0,0,0,0.15)] lg:shadow-none">
+                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Couture Featured"
+                            class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-[2000ms] ease-out">
+                        
+                        <!-- Elegant Gradient Overlay (Mobile) -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent lg:hidden pointer-events-none"></div>
+                        
+                        <!-- Mobile Editorial Content -->
+                        <div class="absolute bottom-0 left-0 w-full p-8 lg:hidden flex flex-col z-10">
+                            <div class="flex items-center gap-3 mb-4">
+                                <div class="w-10 h-[1.5px] bg-[#C7A86D]"></div>
+                                <span class="text-white/90 text-[10px] tracking-[0.4em] uppercase font-bold">Featured</span>
+                            </div>
+                            <h3 class="text-white text-3xl font-light tracking-widest uppercase leading-snug">The <span class="font-bold">Bridal</span> <br><span class="italic font-serif text-[#C7A86D] text-4xl capitalize tracking-normal">Edit.</span></h3>
+                        </div>
+                        
+                        <!-- Premium Inner Border (Mobile) -->
+                        <div class="absolute inset-3 border border-white/20 lg:hidden pointer-events-none z-20"></div>
+                    </div>
+                </div>
+
+                <!-- Right Slider Area -->
+                <div
+                    class="w-full lg:w-[65%] xl:w-[70%] pl-4 lg:pl-12 pr-0 py-8 lg:py-16 flex flex-col justify-center overflow-hidden">
+
+                    <!-- Header -->
+                    <div
+                        class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4 pr-4 lg:pr-8">
+                        <h2 class="text-3xl md:text-4xl tracking-tight uppercase text-black">Couture</h2>
+                        <div class="hidden md:flex items-center gap-6">
+                            <a href="#"
+                                class="text-[12px] text-black border-b border-black pb-0.5 hover:text-gray-600 transition-colors uppercase font-medium">View
+                                all</a>
+                            <div class="flex gap-2">
+                                <button
+                                    class="couture-prev w-8 h-8 border border-gray-300 flex items-center justify-center text-gray-500 hover:text-black hover:border-black transition-colors"><i
+                                        class="ph ph-arrow-left"></i></button>
+                                <button
+                                    class="couture-next w-8 h-8 flex items-center justify-center text-black hover:text-gray-600 transition-colors"><i
+                                        class="ph ph-arrow-right text-lg"></i></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider -->
+                    <div class="swiper couture-swiper relative pb-6 w-full !overflow-visible lg:!overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <!-- Product 1 -->
+                            <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[267.6px]">
+                                <div class="group cursor-pointer">
+                                    <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                        <span
+                                            class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10 uppercase">Pre
+                                            Order</span>
+                                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Bissan"
+                                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out">
+
+                                        <!-- Hover Action Bar -->
+                                        <div
+                                            class="absolute bottom-2 left-2 right-2 bg-white rounded-[8px] py-2.5 px-4 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 shadow-sm">
+                                            <a href="#"
+                                                class="text-[13px] font-medium text-black flex items-center gap-2 hover:text-gray-600 transition-colors">
+                                                View Details <i class="ph ph-arrow-right"></i>
+                                            </a>
+                                            <div class="flex items-center gap-3 text-gray-500">
+                                                <button class="hover:text-black transition-colors"><i
+                                                        class="ph ph-corners-out text-[18px]"></i></button>
+                                                <button class="hover:text-red-500 transition-colors"><i
+                                                        class="ph ph-heart text-[18px]"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 flex flex-col">
+                                        <p class="text-[14px] font-medium text-black mb-1">Bissan</p>
+                                        <p class="text-[16px] font-bold text-black">Rs.200,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 2 -->
+                            <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[267.6px]">
+                                <div class="group cursor-pointer">
+                                    <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                        <span
+                                            class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10 uppercase">Pre
+                                            Order</span>
+                                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Bazif"
+                                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out">
+
+                                        <!-- Hover Action Bar -->
+                                        <div
+                                            class="absolute bottom-2 left-2 right-2 bg-white rounded-[8px] py-2.5 px-4 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 shadow-sm">
+                                            <a href="#"
+                                                class="text-[13px] font-medium text-black flex items-center gap-2 hover:text-gray-600 transition-colors">
+                                                View Details <i class="ph ph-arrow-right"></i>
+                                            </a>
+                                            <div class="flex items-center gap-3 text-gray-500">
+                                                <button class="hover:text-black transition-colors"><i
+                                                        class="ph ph-corners-out text-[18px]"></i></button>
+                                                <button class="hover:text-red-500 transition-colors"><i
+                                                        class="ph ph-heart text-[18px]"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 flex flex-col">
+                                        <p class="text-[14px] font-medium text-black mb-1">Bazif</p>
+                                        <p class="text-[16px] font-bold text-black">Rs.250,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 3 -->
+                            <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[267.6px]">
+                                <div class="group cursor-pointer">
+                                    <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                        <span
+                                            class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10 uppercase">Pre
+                                            Order</span>
+                                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Merjan"
+                                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out">
+
+                                        <!-- Hover Action Bar -->
+                                        <div
+                                            class="absolute bottom-2 left-2 right-2 bg-white rounded-[8px] py-2.5 px-4 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 shadow-sm">
+                                            <a href="#"
+                                                class="text-[13px] font-medium text-black flex items-center gap-2 hover:text-gray-600 transition-colors">
+                                                View Details <i class="ph ph-arrow-right"></i>
+                                            </a>
+                                            <div class="flex items-center gap-3 text-gray-500">
+                                                <button class="hover:text-black transition-colors"><i
+                                                        class="ph ph-corners-out text-[18px]"></i></button>
+                                                <button class="hover:text-red-500 transition-colors"><i
+                                                        class="ph ph-heart text-[18px]"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 flex flex-col">
+                                        <p class="text-[14px] font-medium text-black mb-1">Merjan</p>
+                                        <p class="text-[16px] font-bold text-black">Rs.195,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 4 -->
+                            <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[267.6px]">
+                                <div class="group cursor-pointer">
+                                    <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                        <span
+                                            class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10 uppercase">Pre
+                                            Order</span>
+                                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Velmira"
+                                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out">
+
+                                        <!-- Hover Action Bar -->
+                                        <div
+                                            class="absolute bottom-2 left-2 right-2 bg-white rounded-[8px] py-2.5 px-4 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 shadow-sm">
+                                            <a href="#"
+                                                class="text-[13px] font-medium text-black flex items-center gap-2 hover:text-gray-600 transition-colors">
+                                                View Details <i class="ph ph-arrow-right"></i>
+                                            </a>
+                                            <div class="flex items-center gap-3 text-gray-500">
+                                                <button class="hover:text-black transition-colors"><i
+                                                        class="ph ph-corners-out text-[18px]"></i></button>
+                                                <button class="hover:text-red-500 transition-colors"><i
+                                                        class="ph ph-heart text-[18px]"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 flex flex-col">
+                                        <p class="text-[14px] font-medium text-black mb-1">Velmira</p>
+                                        <p class="text-[16px] font-bold text-black">Rs.250,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Product 5 -->
+                            <div class="swiper-slide w-[75%] sm:w-[45%] lg:w-[267.6px]">
+                                <div class="group cursor-pointer">
+                                    <div class="relative bg-[#f5f5f5] mb-4 aspect-[2/3] rounded-[10px] overflow-hidden">
+                                        <span
+                                            class="absolute top-3 left-3 bg-white text-black text-[10px] font-bold px-2 py-1 rounded-sm shadow-sm z-10 uppercase">Pre
+                                            Order</span>
+                                        <img src="./images/pakistani_bridal_1783255548960.png" alt="Zara"
+                                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-1000 ease-out">
+
+                                        <!-- Hover Action Bar -->
+                                        <div
+                                            class="absolute bottom-2 left-2 right-2 bg-white rounded-[8px] py-2.5 px-4 flex justify-between items-center opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 z-20 shadow-sm">
+                                            <a href="#"
+                                                class="text-[13px] font-medium text-black flex items-center gap-2 hover:text-gray-600 transition-colors">
+                                                View Details <i class="ph ph-arrow-right"></i>
+                                            </a>
+                                            <div class="flex items-center gap-3 text-gray-500">
+                                                <button class="hover:text-black transition-colors"><i
+                                                        class="ph ph-corners-out text-[18px]"></i></button>
+                                                <button class="hover:text-red-500 transition-colors"><i
+                                                        class="ph ph-heart text-[18px]"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="px-1 flex flex-col">
+                                        <p class="text-[14px] font-medium text-black mb-1">Zara</p>
+                                        <p class="text-[16px] font-bold text-black">Rs.150,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Progress Bar -->
+                    <div
+                        class="swiper-pagination couture-pagination hidden md:block !relative mt-4 h-[3px] w-[95%] lg:w-[98%] bg-gray-200 overflow-hidden">
+                    </div>
+
+                    <!-- Mobile View All Button -->
+                    <div class="mt-6 flex justify-center md:hidden pr-4">
+                        <a href="#" class="text-[13px] text-black border-b border-black pb-0.5 hover:text-gray-600 transition-colors uppercase font-medium tracking-widest">View all</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- /WP: Couture Slider Section -->
+
+        <!-- WP: Worn & Loved (Instagram) -->
+        <section class="w-full bg-[#f9f9f9] py-16 overflow-hidden">
+            <div class="max-w-container mx-auto px-4 mb-10 relative flex justify-center items-center">
+                <h2 class="text-3xl md:text-4xl tracking-tight uppercase text-black flex items-center gap-2">
+                    Worn & Loved <span class="text-red-500">❤️</span>
+                </h2>
+                <!-- Arrows -->
+                <div class="absolute right-4 hidden md:flex gap-3">
+                    <button class="worn-loved-prev text-black hover:text-gray-500 transition-colors"><i class="ph ph-arrow-left text-xl"></i></button>
+                    <button class="worn-loved-next text-black hover:text-gray-500 transition-colors"><i class="ph ph-arrow-right text-xl"></i></button>
+                </div>
+            </div>
+
+            <!-- Swiper Container -->
+            <div class="swiper worn-loved-swiper w-full pb-8">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <!-- Faded Overlay (hidden on active slide) -->
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            
+                            <!-- Header -->
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">qudsia.ali</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Luxury Formals</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Image -->
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_unstitched_1783255529516.png" class="w-full h-full object-cover">
+                            </div>
+                            
+                            <!-- Footer -->
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_hero_banner_1783255517941.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">mariam_jaffry</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Luxury Formals</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_unstitched_1783255529516.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">by.rooj1</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Luxury Formals</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_hero_banner_1783255517941.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 4 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_ready_to_wear_1783255538660.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">qudsia1412</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Unstitched</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_ready_to_wear_1783255538660.png" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 5 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">sana.style</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Luxury Formals</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 6 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_hero_banner_1783255517941.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">style.diaries</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Bridal Couture</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_unstitched_1783255529516.png" class="w-full h-full object-cover object-top">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 7 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_ready_to_wear_1783255538660.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">desi.fashion</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Unstitched</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_hero_banner_1783255517941.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slide 8 -->
+                    <div class="swiper-slide group w-[80%] sm:w-[45%] md:w-[30%] lg:w-[320px]">
+                        <div class="bg-white rounded-lg shadow-sm overflow-hidden flex flex-col relative transition-transform duration-500 hover:-translate-y-1">
+                            <div class="absolute inset-0 bg-white/60 z-20 transition-opacity duration-500 pointer-events-none group-[.swiper-slide-active]:opacity-0"></div>
+                            <div class="p-3 flex items-center gap-3 relative z-10 bg-white">
+                                <img src="./images/pakistani_unstitched_1783255529516.png" class="w-8 h-8 rounded-full object-cover">
+                                <div class="flex flex-col">
+                                    <span class="text-[11px] font-bold text-black leading-tight">elegance.by.her</span>
+                                    <span class="text-[10px] text-gray-400 leading-tight">Luxury Formals</span>
+                                </div>
+                            </div>
+                            <div class="relative aspect-[3/4] overflow-hidden">
+                                <img src="./images/pakistani_unstitched_1783255529516.png" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4 flex justify-between items-center relative z-10 bg-white">
+                                <div class="flex items-center gap-3">
+                                    <button class="text-gray-400 hover:text-red-500 transition-colors"><i class="ph-fill ph-heart text-lg text-red-500"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-chat-circle text-lg"></i></button>
+                                    <button class="text-gray-400 hover:text-black transition-colors"><i class="ph ph-paper-plane-tilt text-lg"></i></button>
+                                </div>
+                                <a href="#" class="flex items-center gap-1 text-[11px] font-medium text-black hover:text-gray-500 transition-colors">
+                                    Shop Now <i class="ph ph-shopping-bag text-sm"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- /WP: Worn & Loved -->
+
+    </main>
+
+    <!-- WP: Footer -->
+    <footer class="pt-16 text-sm bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <!-- Newsletter Row -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-12 border-b border-gray-200 gap-6">
+                <div>
+                    <h3 class="font-bold text-xl mb-1 text-black">Join our newsletter</h3>
+                    <p class="text-[13px] text-gray-500">We'll send you updates once per week.</p>
+                </div>
+                <form class="flex flex-col sm:flex-row w-full md:w-auto gap-3 sm:gap-0">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full md:w-[320px] border border-gray-200 px-4 py-3 text-[13px] focus:outline-none focus:border-black transition-colors">
+                    <button type="submit"
+                        class="bg-black text-white px-8 py-3 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Main Links Row -->
+            <div class="py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-5 lg:col-span-6 mb-8 md:mb-0">
+                    <div class="text-3xl md:text-4xl lg:text-5xl tracking-widest md:tracking-[0.2em] uppercase mb-6 md:mb-8 font-light text-black">MAHRUKH GUL</div>
+                    <div class="space-y-3 md:space-y-4 text-[13px] text-gray-500 max-w-sm font-light">
+                        <p>123 Fashion Ave, Retail District<br>Lahore, Pakistan.</p>
+                        <p>Call: +1 234 567 8900</p>
+                        <p>WhatsApp: +1 234 567 8901</p>
+                        <p>Email: info@mahrukhgul.com</p>
+                    </div>
+                </div>
+
+                <!-- Links Columns -->
+                <div class="md:col-span-7 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-8">
+                    <!-- Information -->
+                    <div>
+                        <h3 class="text-[15px] font-medium mb-6 text-black">Information</h3>
+                        <ul class="space-y-4 text-[13px] text-gray-400">
+                            <li><a href="#" class="hover:text-black transition-colors">Returns and Exchange</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">FAQs</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Store Locator</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Track Your Order</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Blogs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Care -->
+                    <div>
+                        <h3 class="text-[15px] font-medium mb-6 text-black">Customer Care</h3>
+                        <ul class="space-y-4 text-[13px] text-gray-400">
+                            <li><a href="#" class="hover:text-black transition-colors">About MAHRUKH GUL</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Careers</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Row -->
+        <div class="border-t border-gray-100 py-6">
+            <div class="max-w-container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-400">
+                <p>&copy; 2026, MAHRUKH GUL. Developed by TW Developers</p>
+                <div class="flex gap-6 mt-4 md:mt-0 text-gray-400">
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-youtube-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-tiktok-logo text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /WP: Footer -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
