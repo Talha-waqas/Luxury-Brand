@@ -215,7 +215,7 @@
     <!-- /WP: Mobile Drawer -->
 
     <!-- MAIN CONTENT -->
-    <main class="min-h-screen bg-white pb-24">
+    <main class="min-h-screen bg-white pb-12 md:pb-20">
         
         <!-- Page Header (Breadcrumbs) -->
         <section class="bg-[#f9f9f9] py-12 md:py-16 border-b border-gray-200 account-anim">
@@ -230,8 +230,8 @@
         </section>
 
         <!-- Authentication Forms -->
-        <section class="max-w-container mx-auto px-4 py-16 md:py-24">
-            <div class="flex flex-col md:flex-row gap-16 md:gap-24 max-w-4xl mx-auto relative account-forms-anim">
+        <section class="max-w-container mx-auto px-4 py-12 md:py-20">
+            <div class="flex flex-col md:flex-row gap-12 md:gap-20 max-w-4xl mx-auto relative account-forms-anim">
                 
                 <!-- Vertical Divider (Desktop only) -->
                 <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-100 -translate-x-1/2"></div>
@@ -276,6 +276,9 @@
                         </button>
                     </form>
                 </div>
+
+                <!-- Horizontal Divider (Mobile only) -->
+                <div class="md:hidden w-full h-px bg-gray-200 my-2"></div>
 
                 <!-- Right: Register Form -->
                 <div class="w-full md:w-1/2 flex flex-col">
