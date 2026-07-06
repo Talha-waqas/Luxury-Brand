@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Cart - MAHRUKH GUL - Luxury Premium Fashion</title>
+    <title>Contact - MAHRUKH GUL</title>
 
     <!-- Google Fonts: Space Grotesk for sans, Cormorant Garamond for serif -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -215,247 +215,135 @@
     <!-- /WP: Mobile Drawer -->
 
     <!-- MAIN CONTENT -->
-    <main class="min-h-[60vh] bg-white">
+    <main class="min-h-screen bg-white">
         
-        <!-- Checkout Header -->
-        <section class="bg-gray-50/50 py-12 border-b border-gray-100">
+        <!-- Page Header (Breadcrumbs) -->
+        <section class="bg-[#f9f9f9] py-12 md:py-16 border-b border-gray-200 contact-anim">
             <div class="max-w-container mx-auto px-4 flex flex-col items-center text-center">
-                <h1 class="text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 text-black font-light">Checkout</h1>
+                <h1 class="text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 text-black font-light">Get In Touch</h1>
                 <nav class="text-[11px] md:text-xs font-medium tracking-widest uppercase text-gray-500 flex items-center gap-2">
                     <a href="index.html" class="hover:text-black transition-colors">Home</a>
                     <span>/</span>
-                    <a href="cart.html" class="hover:text-black transition-colors">Cart</a>
-                    <span>/</span>
-                    <span class="text-black">Checkout</span>
+                    <span class="text-black">Contact</span>
                 </nav>
             </div>
         </section>
 
-        <!-- Checkout Form Section -->
-        <section class="max-w-container mx-auto px-4 py-16">
-            <form id="checkout-form" class="flex flex-col lg:flex-row gap-12 lg:gap-20 relative">
+        <!-- Contact Section -->
+        <section class="max-w-container mx-auto px-4 py-16 md:py-24">
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-24">
                 
-                <!-- Left: Billing Details -->
-                <div class="flex-1 w-full checkout-left">
-                    <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-8 text-black border-b border-black pb-4">Billing Details</h2>
+                <!-- Left: Contact Details -->
+                <div class="w-full lg:w-[40%] flex flex-col gap-10 contact-left-anim">
                     
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">First Name *</label>
-                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Last Name *</label>
-                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                    </div>
-                    
-                    <div class="flex flex-col mb-6">
-                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Company Name (Optional)</label>
-                        <input type="text" class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                    </div>
-                    
-                    <div class="flex flex-col mb-6 relative">
-                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Country / Region *</label>
-                        <select required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent appearance-none cursor-pointer">
-                            <option value="">Select a country...</option>
-                            <option value="PK">Pakistan</option>
-                            <option value="US">United States</option>
-                            <option value="GB">United Kingdom</option>
-                            <option value="AE">United Arab Emirates</option>
-                        </select>
-                        <i class="ph ph-caret-down absolute right-2 top-9 text-gray-500 pointer-events-none"></i>
-                    </div>
-                    
-                    <div class="flex flex-col mb-6">
-                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Street Address *</label>
-                        <input type="text" placeholder="House number and street name" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent mb-4 placeholder-gray-300">
-                        <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent placeholder-gray-300">
-                    </div>
-                    
-                    <div class="flex flex-col mb-6">
-                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Town / City *</label>
-                        <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">State / County *</label>
-                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Postcode / ZIP *</label>
-                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                    </div>
-                    
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Phone *</label>
-                            <input type="tel" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                        <div class="flex flex-col">
-                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Email Address *</label>
-                            <input type="email" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
-                        </div>
-                    </div>
-
-                    <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-6 text-black border-b border-black pb-4">Additional Information</h2>
-                    <div class="flex flex-col mb-6">
-                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Order Notes (Optional)</label>
-                        <textarea placeholder="Notes about your order, e.g. special notes for delivery." rows="4" class="border border-gray-300 p-4 text-sm focus:outline-none focus:border-black transition-colors bg-transparent resize-none placeholder-gray-300"></textarea>
-                    </div>
-
-                </div>
-
-                <!-- Right: Order Summary & Payment -->
-                <div class="w-full lg:w-[450px] flex-shrink-0 checkout-right">
-                    <div class="bg-[#f9f9f9] p-8 lg:p-10 sticky top-[120px]">
-                        <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-8 text-black border-b border-gray-200 pb-4">Your Order</h2>
-                        
-                        <!-- Order Items Table -->
-                        <div class="mb-8">
-                            <div class="flex justify-between text-[10px] tracking-[0.2em] font-bold uppercase text-gray-400 mb-4 pb-2 border-b border-gray-200">
-                                <span>Product</span>
-                                <span>Subtotal</span>
-                            </div>
-                            
-                            <!-- Item 1 -->
-                            <div class="flex justify-between items-center py-4 border-b border-gray-100">
-                                <div class="flex gap-4 items-center">
-                                    <div class="w-12 h-16 bg-gray-200 rounded-sm overflow-hidden flex-shrink-0">
-                                        <img src="./images/luxury_pret_1783285387396.png" class="w-full h-full object-cover">
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-sm font-medium text-black line-clamp-1">Midnight Silk Suit</span>
-                                        <span class="text-[11px] text-gray-500">Qty: 1</span>
-                                    </div>
-                                </div>
-                                <span class="text-sm font-medium">Rs. 18,990</span>
-                            </div>
-
-                            <!-- Item 2 -->
-                            <div class="flex justify-between items-center py-4 border-b border-gray-100">
-                                <div class="flex gap-4 items-center">
-                                    <div class="w-12 h-16 bg-gray-200 rounded-sm overflow-hidden flex-shrink-0">
-                                        <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover object-top">
-                                    </div>
-                                    <div class="flex flex-col">
-                                        <span class="text-sm font-medium text-black line-clamp-1">Pastel Silver Couture</span>
-                                        <span class="text-[11px] text-gray-500">Qty: 1</span>
-                                    </div>
-                                </div>
-                                <span class="text-sm font-medium">Rs. 320,000</span>
-                            </div>
-                        </div>
-
-                        <!-- Totals -->
-                        <div class="space-y-4 mb-8">
-                            <div class="flex justify-between text-sm text-gray-600">
-                                <span>Subtotal</span>
-                                <span>Rs. 338,990</span>
-                            </div>
-                            <div class="flex justify-between text-sm text-gray-600">
-                                <span>Shipping</span>
-                                <span>Free Shipping</span>
-                            </div>
-                            <div class="flex justify-between text-xl font-serif text-black pt-4 border-t border-black">
-                                <span>Total</span>
-                                <span>Rs. 338,990</span>
-                            </div>
-                        </div>
-
-                        <!-- Payment Methods -->
-                        <div class="mb-8 space-y-4">
-                            <div class="payment-method border border-black p-4 rounded-sm cursor-pointer transition-colors bg-white">
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment_method" value="bacs" checked class="accent-[#C7A86D] w-4 h-4">
-                                    <span class="text-sm font-bold uppercase tracking-wider">Direct Bank Transfer</span>
-                                </label>
-                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed">
-                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
-                                </div>
-                            </div>
-                            
-                            <div class="payment-method border border-gray-200 p-4 rounded-sm cursor-pointer hover:border-gray-400 transition-colors">
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment_method" value="cod" class="accent-[#C7A86D] w-4 h-4">
-                                    <span class="text-sm font-bold uppercase tracking-wider">Cash on Delivery</span>
-                                </label>
-                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed hidden">
-                                    Pay with cash upon delivery.
-                                </div>
-                            </div>
-
-                            <div class="payment-method border border-gray-200 p-4 rounded-sm cursor-pointer hover:border-gray-400 transition-colors">
-                                <label class="flex items-center gap-3 cursor-pointer">
-                                    <input type="radio" name="payment_method" value="stripe" class="accent-[#C7A86D] w-4 h-4">
-                                    <span class="text-sm font-bold uppercase tracking-wider">Credit Card (Stripe)</span>
-                                </label>
-                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed hidden">
-                                    Pay securely using your credit or debit card.
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Legal -->
-                        <p class="text-[10px] text-gray-500 mb-8 leading-relaxed">
-                            Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#" class="text-black underline">privacy policy</a>.
+                    <div>
+                        <h2 class="text-2xl font-serif text-black mb-6 uppercase tracking-widest">Our Boutique</h2>
+                        <p class="text-[13px] text-gray-500 leading-relaxed font-light mb-4">
+                            Visit our flagship studio to experience the craftsmanship of MAHRUKH GUL in person. Book a bespoke bridal appointment or explore our luxury pret collection.
                         </p>
+                    </div>
 
-                        <!-- Submit -->
-                        <button type="submit" class="w-full bg-black text-white py-4 text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#C7A86D] transition-colors rounded-sm shadow-lg">
-                            Place Order
-                        </button>
+                    <div class="border-t border-gray-100 pt-8 flex flex-col gap-6">
+                        <div class="flex gap-4 items-start group">
+                            <i class="ph ph-map-pin text-2xl text-gray-400 group-hover:text-[#C7A86D] transition-colors mt-0.5"></i>
+                            <div>
+                                <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-black mb-1">Address</h3>
+                                <p class="text-[13px] text-gray-500 font-light">12-A, Gulberg III, M.M. Alam Road<br>Lahore, Pakistan</p>
+                            </div>
+                        </div>
 
+                        <div class="flex gap-4 items-start group">
+                            <i class="ph ph-envelope-simple text-2xl text-gray-400 group-hover:text-[#C7A86D] transition-colors mt-0.5"></i>
+                            <div>
+                                <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-black mb-1">Email</h3>
+                                <p class="text-[13px] text-gray-500 font-light"><a href="mailto:info@mahrukhgul.com" class="hover:text-[#C7A86D] transition-colors">info@mahrukhgul.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 items-start group">
+                            <i class="ph ph-phone text-2xl text-gray-400 group-hover:text-[#C7A86D] transition-colors mt-0.5"></i>
+                            <div>
+                                <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-black mb-1">Phone</h3>
+                                <p class="text-[13px] text-gray-500 font-light"><a href="tel:+923001234567" class="hover:text-[#C7A86D] transition-colors">+92 300 123 4567</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 items-start group">
+                            <i class="ph ph-clock text-2xl text-gray-400 group-hover:text-[#C7A86D] transition-colors mt-0.5"></i>
+                            <div>
+                                <h3 class="text-[11px] font-bold uppercase tracking-[0.2em] text-black mb-1">Hours</h3>
+                                <p class="text-[13px] text-gray-500 font-light">Mon - Sat: 11:00 AM - 8:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </form>
+
+                <!-- Right: Contact Form -->
+                <div class="w-full lg:w-[60%] contact-right-anim">
+                    <h2 class="text-2xl font-serif text-black mb-8 uppercase tracking-widest">Send a Message</h2>
+                    
+                    <form action="#" method="POST" class="flex flex-col gap-8">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div class="relative">
+                                <input type="text" id="name" name="name" required
+                                    class="peer w-full bg-transparent border-b border-gray-200 py-3 text-[13px] text-black focus:outline-none focus:border-black transition-colors placeholder-transparent">
+                                <label for="name"
+                                    class="absolute left-0 top-3 text-[11px] tracking-widest uppercase text-gray-400 transition-all peer-placeholder-shown:text-[11px] peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-black pointer-events-none font-medium">Full Name</label>
+                            </div>
+                            
+                            <div class="relative">
+                                <input type="email" id="email" name="email" required
+                                    class="peer w-full bg-transparent border-b border-gray-200 py-3 text-[13px] text-black focus:outline-none focus:border-black transition-colors placeholder-transparent">
+                                <label for="email"
+                                    class="absolute left-0 top-3 text-[11px] tracking-widest uppercase text-gray-400 transition-all peer-placeholder-shown:text-[11px] peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-black pointer-events-none font-medium">Email Address</label>
+                            </div>
+                        </div>
+
+                        <div class="relative">
+                            <input type="text" id="subject" name="subject" required
+                                class="peer w-full bg-transparent border-b border-gray-200 py-3 text-[13px] text-black focus:outline-none focus:border-black transition-colors placeholder-transparent">
+                            <label for="subject"
+                                class="absolute left-0 top-3 text-[11px] tracking-widest uppercase text-gray-400 transition-all peer-placeholder-shown:text-[11px] peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-black pointer-events-none font-medium">Subject</label>
+                        </div>
+
+                        <div class="relative mt-2">
+                            <textarea id="message" name="message" rows="4" required
+                                class="peer w-full bg-transparent border-b border-gray-200 py-3 text-[13px] text-black focus:outline-none focus:border-black transition-colors placeholder-transparent resize-none"></textarea>
+                            <label for="message"
+                                class="absolute left-0 top-3 text-[11px] tracking-widest uppercase text-gray-400 transition-all peer-placeholder-shown:text-[11px] peer-placeholder-shown:top-3 peer-focus:-top-3.5 peer-focus:text-[9px] peer-focus:text-black pointer-events-none font-medium">Your Message</label>
+                        </div>
+
+                        <button type="submit" class="w-full md:w-auto md:self-start bg-black text-white px-12 h-[50px] mt-4 text-[11px] md:text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#C7A86D] transition-colors rounded-sm flex items-center justify-center gap-2 shadow-sm group">
+                            Send Message <i class="ph ph-paper-plane-tilt text-lg group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
         </section>
+
+
+
     </main>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Payment Methods Toggle Logic
-            const paymentMethods = document.querySelectorAll('.payment-method');
-            paymentMethods.forEach(method => {
-                const radio = method.querySelector('input[type="radio"]');
-                
-                // Click anywhere on the box checks the radio
-                method.addEventListener('click', (e) => {
-                    if (e.target !== radio) {
-                        radio.checked = true;
-                        radio.dispatchEvent(new Event('change', { bubbles: true }));
-                    }
-                });
-            });
-
-            document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
-                radio.addEventListener('change', (e) => {
-                    // Reset all
-                    document.querySelectorAll('.payment-method').forEach(method => {
-                        method.classList.remove('border-black', 'bg-white');
-                        method.classList.add('border-gray-200');
-                        method.querySelector('.payment-desc').classList.add('hidden');
-                    });
-
-                    // Set active
-                    const activeMethod = e.target.closest('.payment-method');
-                    activeMethod.classList.remove('border-gray-200');
-                    activeMethod.classList.add('border-black', 'bg-white');
-                    activeMethod.querySelector('.payment-desc').classList.remove('hidden');
-                });
-            });
-
-            // GSAP Entrance Animations
-            gsap.fromTo('.checkout-left', 
-                { opacity: 0, x: -20 },
-                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.1 }
+            gsap.registerPlugin(ScrollTrigger);
+            
+            gsap.fromTo('.contact-anim',
+                { opacity: 0, y: -20 },
+                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
             );
-            gsap.fromTo('.checkout-right',
-                { opacity: 0, x: 20 },
-                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 }
+            
+            gsap.fromTo('.contact-left-anim > *',
+                { opacity: 0, x: -30 },
+                { opacity: 1, x: 0, duration: 0.8, stagger: 0.1, ease: 'power3.out', delay: 0.2 }
             );
+            
+            gsap.fromTo('.contact-right-anim',
+                { opacity: 0, x: 30 },
+                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.4 }
+            );
+
         });
     </script>
 
