@@ -200,3 +200,23 @@ body {
 .summer-sale-swiper .swiper-wrapper {
     transition-timing-function: linear !important;
 }
+
+/* 9. Mobile Grid View Overlay Tweaks */
+@media (max-width: 639px) {
+    #product-grid.grid-cols-2 .group .bg-white\/95 {
+        padding: 6px 8px !important;
+        bottom: 8px !important;
+        left: 8px !important;
+        right: 8px !important;
+        border-radius: 4px !important;
+    }
+    #product-grid.grid-cols-2 .group .bg-white\/95 > span {
+        font-size: 10px !important;
+    }
+    #product-grid.grid-cols-2 .group .bg-white\/95 .gap-3 {
+        gap: 6px !important;
+    }
+    #product-grid.grid-cols-2 .group .bg-white\/95 i {
+        font-size: 14px !important;
+    }
+}

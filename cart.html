@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart - MAHRUKH GUL - Luxury Premium Fashion</title>
+
+    <!-- Google Fonts: Space Grotesk for sans, Cormorant Garamond for serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Tailwind CSS (via CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            black: '#111111',
+                            gold: '#C7A86D',
+                            text: '#222222',
+                            gray: '#f5f5f5',
+                            border: '#e5e5e5',
+                            red: '#e53e3e',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Space Grotesk"', 'sans-serif'],
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                    },
+                    maxWidth: {
+                        'container': '1440px',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-sans text-brand-text bg-white antialiased overflow-x-hidden">
+
+    <!-- WP: Luxury Header Wrapper -->
+    <div id="header-wrapper" class="sticky top-0 w-full z-50 flex flex-col bg-white transition-shadow duration-300">
+
+        <!-- WP: Announcement Bar -->
+        <div
+            class="h-[36px] w-full bg-[#111111] border-b border-[#C7A86D]/30 text-[#C7A86D] text-[10px] tracking-[0.2em] uppercase overflow-hidden relative flex items-center">
+            <div class="marquee-container w-full min-w-0">
+                <div class="marquee-content font-medium">
+                    <span class="marquee-item">Complimentary Worldwide Shipping</span>
+                    <span class="marquee-item">New Luxury Collection Available</span>
+                    <span class="marquee-item">Premium Packaging Included</span>
+                    <span class="marquee-item">Easy Returns</span>
+                    <!-- Duplicate for infinite scroll -->
+                    <span class="marquee-item">Complimentary Worldwide Shipping</span>
+                    <span class="marquee-item">New Luxury Collection Available</span>
+                    <span class="marquee-item">Premium Packaging Included</span>
+                    <span class="marquee-item">Easy Returns</span>
+                </div>
+            </div>
+        </div>
+        <!-- /WP: Announcement Bar -->
+
+        <!-- WP: Main Header -->
+        <header id="main-header" class="w-full flex flex-col border-b border-gray-100">
+            <!-- Top Logo & Icons Row -->
+            <div class="max-w-container mx-auto px-6 w-full flex items-center justify-between h-[80px] md:h-[100px]">
+
+                <!-- Left: Hamburger & Search -->
+                <div class="flex items-center gap-6 w-1/3 text-xl">
+                    <button id="mobile-menu-trigger" class="icon-btn lg:hidden hover:text-[#C7A86D]"><i
+                            class="ph ph-list"></i></button>
+                    <button class="icon-btn hidden md:block hover:text-[#C7A86D]"><i
+                            class="ph ph-magnifying-glass"></i></button>
+                </div>
+
+                <!-- Center: Luxury Logo -->
+                <div class="w-1/3 flex justify-center">
+                    <a href="index.html"
+                        class="logo-text text-center text-3xl md:text-[42px] font-medium tracking-[0.3em] uppercase font-serif text-brand-black leading-tight">
+                        MAHRUKH GUL
+                    </a>
+                </div>
+
+                <!-- Right: Icons -->
+                <div class="w-1/3 flex justify-end items-center gap-6 text-xl">
+                    <button class="icon-btn hidden md:block"><i class="ph ph-user"></i></button>
+                    <button class="icon-btn hidden md:block"><i class="ph ph-heart"></i></button>
+                    <a href="cart.html" class="icon-btn relative">
+                        <i class="ph ph-bag text-[#C7A86D]"></i>
+                        <span
+                            class="absolute -top-1 -right-2 bg-[#C7A86D] text-white text-[9px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Bottom Navigation -->
+            <nav
+                class="hidden lg:flex justify-center h-[50px] items-center text-[11px] tracking-[0.25em] font-medium uppercase">
+                <ul class="flex gap-10 h-full items-center">
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">New Arrivals</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center group">
+                        <a href="shop.html" class="nav-link flex items-center gap-1">Unstitched <i
+                                class="ph ph-caret-down text-[#C7A86D] text-[10px] font-bold"></i></a>
+
+                        <!-- Mega Menu Dropdown -->
+                        <div
+                            class="mega-menu absolute top-[100%] left-0 w-full h-[400px] border-b border-[#e5e5e5]/50 shadow-xl flex z-40">
+                            <div class="max-w-container mx-auto w-full flex gap-8 p-12">
+                                <!-- Editorial Banner -->
+                                <div class="w-1/3 relative h-full group/banner overflow-hidden cursor-pointer">
+                                    <img src="./images/pakistani_unstitched_1783255529516.png"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover/banner:scale-105">
+                                    <div class="absolute inset-0 bg-black/20"></div>
+                                    <h3 class="absolute bottom-6 left-6 text-white text-2xl font-serif tracking-widest">
+                                        The Lawn Edit</h3>
+                                </div>
+                                <!-- Links -->
+                                <div class="w-1/4 flex flex-col gap-4">
+                                    <h4 class="text-[10px] text-gray-400 font-bold tracking-[0.3em] uppercase mb-2">
+                                        Categories</h4>
+                                    <a href="shop.html" class="text-xs hover:text-[#C7A86D] transition-colors">Embroidered Lawn</a>
+                                    <a href="shop.html" class="text-xs hover:text-[#C7A86D] transition-colors">Printed Lawn</a>
+                                    <a href="shop.html" class="text-xs hover:text-[#C7A86D] transition-colors">Chiffon Dupatta</a>
+                                    <a href="shop.html" class="text-xs hover:text-[#C7A86D] transition-colors">Silk Dupatta</a>
+                                    <a href="shop.html" class="text-xs text-[#C7A86D] font-bold mt-4">View All Unstitched</a>
+                                </div>
+                                <!-- Featured Products -->
+                                <div class="w-5/12 grid grid-cols-2 gap-4">
+                                    <div class="h-full">
+                                        <img src="./images/pakistani_ready_to_wear_1783255538660.png"
+                                            class="w-full h-[80%] object-cover mb-2">
+                                        <p class="text-[10px] tracking-widest font-bold">Midnight Bloom</p>
+                                    </div>
+                                    <div class="h-full">
+                                        <img src="./images/pakistani_kids_1783255560247.png"
+                                            class="w-full h-[80%] object-cover mb-2">
+                                        <p class="text-[10px] tracking-widest font-bold">Emerald Dream</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">Ready To Wear</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">Luxury Pret</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">Formals</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">Bridal</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link">Accessories</a>
+                    </li>
+                    <li class="nav-item h-full flex items-center">
+                        <a href="shop.html" class="nav-link text-[#C7A86D] font-bold">Sale</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- /WP: Main Header -->
+    </div>
+    <!-- /WP: Luxury Header Wrapper -->
+
+    <!-- WP: Mobile Drawer -->
+    <aside id="mobile-drawer" class="fixed inset-0 z-[60] w-full h-screen">
+        <!-- Overlay -->
+        <div id="drawer-overlay" class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0"></div>
+
+        <!-- Drawer Content -->
+        <div id="drawer-content"
+            class="absolute top-0 left-0 w-[85%] max-w-[400px] h-full bg-white shadow-2xl flex flex-col transform -translate-x-full">
+            <!-- Drawer Header -->
+            <div class="flex justify-between items-center p-6 border-b border-[#e5e5e5]">
+                <span class="font-serif tracking-[0.2em] font-medium text-lg">MAHRUKH GUL</span>
+                <button id="drawer-close" class="text-2xl hover:text-[#C7A86D] transition-colors"><i
+                        class="ph ph-x"></i></button>
+            </div>
+            <!-- Drawer Links -->
+            <div class="flex-1 overflow-y-auto p-6 flex flex-col gap-6 text-sm tracking-[0.2em] font-medium uppercase">
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">New Arrivals</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Unstitched</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Ready To Wear</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Luxury Pret</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Formals</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Bridal</a>
+                <a href="shop.html" class="hover:text-[#C7A86D] transition-colors">Accessories</a>
+                <a href="shop.html" class="text-[#C7A86D] font-bold">Sale</a>
+
+                <hr class="border-[#e5e5e5] my-2">
+                <a href="#" class="hover:text-[#C7A86D] transition-colors flex items-center gap-2"><i
+                        class="ph ph-user text-lg"></i> Account</a>
+                <a href="#" class="hover:text-[#C7A86D] transition-colors flex items-center gap-2"><i
+                        class="ph ph-heart text-lg"></i> Wishlist</a>
+            </div>
+        </div>
+    </aside>
+    <!-- /WP: Mobile Drawer -->
+
+    <!-- MAIN CONTENT -->
+    <main class="min-h-[60vh] bg-white">
+        
+        <!-- Cart Header -->
+        <section class="bg-gray-50/50 py-12 border-b border-gray-100">
+            <div class="max-w-container mx-auto px-4 flex flex-col items-center text-center">
+                <h1 class="text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 text-black font-light">Shopping Cart</h1>
+                <nav class="text-[11px] md:text-xs font-medium tracking-widest uppercase text-gray-500 flex items-center gap-2">
+                    <a href="index.html" class="hover:text-black transition-colors">Home</a>
+                    <span>/</span>
+                    <span class="text-black">Cart</span>
+                </nav>
+            </div>
+        </section>
+
+        <!-- Cart Section -->
+        <section class="max-w-container mx-auto px-4 py-16">
+            <form id="cart-form" class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+                
+                <!-- Left: Cart Items -->
+                <div class="flex-1 w-full">
+                    <!-- Cart Header (Desktop) -->
+                    <div class="hidden md:grid grid-cols-12 gap-4 pb-4 border-b border-black text-[10px] tracking-[0.2em] font-bold uppercase text-gray-400">
+                        <div class="col-span-6">Product</div>
+                        <div class="col-span-2 text-center">Quantity</div>
+                        <div class="col-span-3 text-right">Total</div>
+                        <div class="col-span-1"></div>
+                    </div>
+
+                    <!-- Cart Item 1 -->
+                    <div class="cart-item py-6 md:py-8 border-b border-gray-100 grid grid-cols-[90px_1fr] md:grid-cols-12 gap-x-4 gap-y-2 md:gap-y-0 items-center relative group">
+                        <!-- Mobile Remove Button -->
+                        <button type="button" class="remove-btn md:hidden absolute top-4 right-0 text-gray-400 hover:text-red-500 transition-colors p-2 z-10"><i class="ph ph-trash text-lg"></i></button>
+
+                        <!-- Image -->
+                        <div class="col-span-1 row-span-2 md:row-span-1 md:col-span-2 h-full flex items-center">
+                            <a href="#" class="w-full h-[120px] md:h-36 flex-shrink-0 bg-gray-50 rounded-sm overflow-hidden block">
+                                <img src="./images/luxury_pret_1783285387396.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                            </a>
+                        </div>
+
+                        <!-- Details -->
+                        <div class="col-span-1 md:col-span-4 flex flex-col justify-start py-1">
+                            <span class="text-[9px] md:text-[10px] text-brand-gold tracking-widest uppercase font-bold mb-1">Luxury Pret</span>
+                            <a href="#" class="text-[14px] md:text-lg font-medium text-black hover:text-gray-500 transition-colors pr-8 md:pr-0 mb-1 leading-tight">Midnight Silk Suit</a>
+                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1">Size: <span class="text-black font-medium">M</span></p>
+                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1 md:mb-0">Fabric: <span class="text-black font-medium">Silk</span></p>
+                            <div class="hidden item-price">18,990</div>
+                        </div>
+
+                        <!-- Price & Quantity -->
+                        <div class="col-start-2 md:col-start-7 col-span-1 md:col-span-2 flex flex-row md:flex-col justify-between md:justify-center items-center mt-auto md:mt-0">
+                            <!-- Mobile Price -->
+                            <p class="md:hidden text-[14px] font-medium">Rs. 18,990</p>
+                            
+                            <!-- Quantity -->
+                            <div class="flex items-center border border-gray-200 rounded-sm h-8 md:h-10 w-[90px] md:w-[110px]">
+                                <button type="button" class="qty-btn minus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-minus text-xs md:text-base"></i></button>
+                                <input type="number" value="1" min="1" class="qty-input w-1/3 h-full text-center text-xs md:text-[13px] font-medium bg-transparent focus:outline-none" readonly>
+                                <button type="button" class="qty-btn plus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-plus text-xs md:text-base"></i></button>
+                            </div>
+                        </div>
+
+                        <!-- Total (Desktop) -->
+                        <div class="hidden md:flex col-span-3 justify-end">
+                            <p class="text-base font-medium">Rs. <span class="item-total">18,990</span></p>
+                        </div>
+
+                        <!-- Remove Button (Desktop) -->
+                        <div class="hidden md:flex col-span-1 justify-end">
+                            <button type="button" class="remove-btn text-gray-400 hover:text-red-500 transition-colors p-2"><i class="ph ph-trash text-xl"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Cart Item 2 -->
+                    <div class="cart-item py-6 md:py-8 border-b border-gray-100 grid grid-cols-[90px_1fr] md:grid-cols-12 gap-x-4 gap-y-2 md:gap-y-0 items-center relative group">
+                        <button type="button" class="remove-btn md:hidden absolute top-4 right-0 text-gray-400 hover:text-red-500 transition-colors p-2 z-10"><i class="ph ph-trash text-lg"></i></button>
+
+                        <div class="col-span-1 row-span-2 md:row-span-1 md:col-span-2 h-full flex items-center">
+                            <a href="#" class="w-full h-[120px] md:h-36 flex-shrink-0 bg-gray-50 rounded-sm overflow-hidden block">
+                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 object-top">
+                            </a>
+                        </div>
+
+                        <div class="col-span-1 md:col-span-4 flex flex-col justify-start py-1">
+                            <span class="text-[9px] md:text-[10px] text-brand-gold tracking-widest uppercase font-bold mb-1">Bridal</span>
+                            <a href="#" class="text-[14px] md:text-lg font-medium text-black hover:text-gray-500 transition-colors pr-8 md:pr-0 mb-1 leading-tight">Pastel Silver Anarkali</a>
+                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1">Size: <span class="text-black font-medium">Custom</span></p>
+                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1 md:mb-0">Fabric: <span class="text-black font-medium">Net/Silk</span></p>
+                            <div class="hidden item-price">45,000</div>
+                        </div>
+
+                        <div class="col-start-2 md:col-start-7 col-span-1 md:col-span-2 flex flex-row md:flex-col justify-between md:justify-center items-center mt-auto md:mt-0">
+                            <p class="md:hidden text-[14px] font-medium">Rs. 45,000</p>
+                            <div class="flex items-center border border-gray-200 rounded-sm h-8 md:h-10 w-[90px] md:w-[110px]">
+                                <button type="button" class="qty-btn minus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-minus text-xs md:text-base"></i></button>
+                                <input type="number" value="1" min="1" class="qty-input w-1/3 h-full text-center text-xs md:text-[13px] font-medium bg-transparent focus:outline-none" readonly>
+                                <button type="button" class="qty-btn plus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-plus text-xs md:text-base"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="hidden md:flex col-span-3 justify-end">
+                            <p class="text-base font-medium">Rs. <span class="item-total">45,000</span></p>
+                        </div>
+
+                        <div class="hidden md:flex col-span-1 justify-end">
+                            <button type="button" class="remove-btn text-gray-400 hover:text-red-500 transition-colors p-2"><i class="ph ph-trash text-xl"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Continue Shopping -->
+                    <div class="mt-8 pb-12 lg:pb-0">
+                        <a href="shop.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold text-gray-500 hover:text-black transition-colors">
+                            <i class="ph ph-arrow-left text-lg"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Order Summary (WordPress/WooCommerce friendly sidebar structure) -->
+                <div class="w-full lg:w-[380px] flex-shrink-0 relative">
+                    <div class="bg-[#f9f9f9] p-8 rounded-[8px] lg:sticky lg:top-[120px] border border-gray-100">
+                        <h2 class="text-lg font-serif tracking-widest uppercase mb-6 text-black border-b border-gray-200 pb-4">Order Summary</h2>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex justify-between items-center text-[14px]">
+                                <span class="text-gray-500">Subtotal</span>
+                                <span class="font-medium text-black">Rs. <span id="cart-subtotal">63,990</span></span>
+                            </div>
+                            <div class="flex justify-between items-center text-[14px]">
+                                <span class="text-gray-500">Shipping</span>
+                                <span class="font-medium text-black">Calculated at next step</span>
+                            </div>
+                        </div>
+
+                        <!-- Promo Code -->
+                        <div class="mb-8 pt-6 border-t border-gray-200">
+                            <p class="text-[11px] font-bold uppercase tracking-widest mb-3 text-black">Gift Card / Promo Code</p>
+                            <div class="flex gap-0">
+                                <input type="text" placeholder="Enter code" class="flex-1 border border-gray-200 px-4 py-3 text-[13px] focus:outline-none focus:border-black transition-colors rounded-l-sm bg-white">
+                                <button type="button" class="px-6 py-3 bg-black text-white text-[11px] uppercase tracking-widest font-bold hover:bg-[#C7A86D] transition-colors rounded-r-sm">Apply</button>
+                            </div>
+                        </div>
+
+                        <!-- Grand Total -->
+                        <div class="pt-6 border-t border-black mb-8 flex justify-between items-end">
+                            <span class="text-base font-bold uppercase tracking-wider text-black">Total</span>
+                            <span class="text-3xl font-serif text-black font-medium">Rs. <span id="cart-total">63,990</span></span>
+                        </div>
+
+                        <p class="text-[11px] text-gray-500 mb-6 text-center">Taxes and shipping calculated at checkout.</p>
+                        
+                        <button type="submit" class="w-full bg-black text-white py-4 text-[12px] font-bold uppercase tracking-widest hover:bg-[#C7A86D] transition-colors rounded-sm flex items-center justify-center gap-2">
+                            Proceed to Checkout <i class="ph ph-arrow-right text-lg"></i>
+                        </button>
+                        
+                        <!-- Trust Badges -->
+                        <div class="mt-6 flex items-center justify-center gap-4 text-gray-400">
+                            <i class="ph ph-lock-key text-xl"></i>
+                            <i class="ph ph-shield-check text-xl"></i>
+                            <i class="ph ph-credit-card text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- WP: Footer -->
+    <footer class="pt-16 text-sm bg-white">
+        <div class="max-w-container mx-auto px-4">
+            <!-- Newsletter Row -->
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center pb-12 border-b border-gray-200 gap-6">
+                <div>
+                    <h3 class="font-bold text-xl mb-1 text-black">Join our newsletter</h3>
+                    <p class="text-[13px] text-gray-500">We'll send you updates once per week.</p>
+                </div>
+                <form class="flex flex-col sm:flex-row w-full md:w-auto gap-3 sm:gap-0">
+                    <input type="email" placeholder="Enter your email"
+                        class="w-full md:w-[320px] border border-gray-200 px-4 py-3 text-[13px] focus:outline-none focus:border-black transition-colors">
+                    <button type="submit"
+                        class="bg-black text-white px-8 py-3 text-[12px] font-bold uppercase tracking-wider whitespace-nowrap">Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Main Links Row -->
+            <div class="py-16 grid grid-cols-1 md:grid-cols-12 gap-12">
+                <!-- Brand Info -->
+                <div class="md:col-span-5 lg:col-span-6 mb-8 md:mb-0">
+                    <div class="text-3xl md:text-4xl lg:text-5xl tracking-widest md:tracking-[0.2em] uppercase mb-6 md:mb-8 font-light text-black">MAHRUKH GUL</div>
+                    <div class="space-y-3 md:space-y-4 text-[13px] text-gray-500 max-w-sm font-light">
+                        <p>123 Fashion Ave, Retail District<br>Lahore, Pakistan.</p>
+                        <p>Call: +1 234 567 8900</p>
+                        <p>WhatsApp: +1 234 567 8901</p>
+                        <p>Email: info@mahrukhgul.com</p>
+                    </div>
+                </div>
+
+                <!-- Links Columns -->
+                <div class="md:col-span-7 lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-8">
+                    <!-- Information -->
+                    <div>
+                        <h3 class="text-[15px] font-medium mb-6 text-black">Information</h3>
+                        <ul class="space-y-4 text-[13px] text-gray-400">
+                            <li><a href="#" class="hover:text-black transition-colors">Returns and Exchange</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Privacy Policy</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">FAQs</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Store Locator</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Track Your Order</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Blogs</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Customer Care -->
+                    <div>
+                        <h3 class="text-[15px] font-medium mb-6 text-black">Customer Care</h3>
+                        <ul class="space-y-4 text-[13px] text-gray-400">
+                            <li><a href="#" class="hover:text-black transition-colors">About MAHRUKH GUL</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Contact Us</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Careers</a></li>
+                            <li><a href="#" class="hover:text-black transition-colors">Terms and Conditions</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright Row -->
+        <div class="border-t border-gray-100 py-6">
+            <div class="max-w-container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-[12px] text-gray-400">
+                <p>&copy; 2026, MAHRUKH GUL. Developed by TW Developers</p>
+                <div class="flex gap-6 mt-4 md:mt-0 text-gray-400">
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-youtube-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-instagram-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-facebook-logo text-xl"></i></a>
+                    <a href="#" class="hover:text-black transition-colors"><i class="ph-fill ph-tiktok-logo text-xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /WP: Footer -->
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Cart Interactions
+            const cartItems = document.querySelectorAll('.cart-item');
+            const subtotalEl = document.getElementById('cart-subtotal');
+            const totalEl = document.getElementById('cart-total');
+
+            function updateCartTotals() {
+                let subtotal = 0;
+                let activeItemsCount = 0;
+                
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    activeItemsCount++;
+                    const priceEl = item.querySelector('.item-price');
+                    if(priceEl) {
+                        const priceText = priceEl.innerText.replace(/[^0-9]/g, '');
+                        const price = parseInt(priceText) || 0;
+                        const qty = parseInt(item.querySelector('.qty-input').value) || 1;
+                        const total = price * qty;
+                        
+                        // Update item total
+                        const itemTotalEls = item.querySelectorAll('.item-total');
+                        itemTotalEls.forEach(el => el.innerText = total.toLocaleString('en-IN'));
+                        
+                        subtotal += total;
+                    }
+                });
+
+                if(subtotalEl) subtotalEl.innerText = subtotal.toLocaleString('en-IN');
+                if(totalEl) totalEl.innerText = subtotal.toLocaleString('en-IN');
+                
+                // Update header bag count
+                const bagCount = document.querySelector('.ph-bag + span');
+                if(bagCount) bagCount.innerText = activeItemsCount;
+            }
+
+            cartItems.forEach(item => {
+                const minusBtn = item.querySelector('.minus');
+                const plusBtn = item.querySelector('.plus');
+                const input = item.querySelector('.qty-input');
+                const removeBtns = item.querySelectorAll('.remove-btn');
+
+                if(minusBtn && plusBtn && input) {
+                    minusBtn.addEventListener('click', () => {
+                        let val = parseInt(input.value);
+                        if(val > 1) {
+                            input.value = val - 1;
+                            updateCartTotals();
+                        }
+                    });
+
+                    plusBtn.addEventListener('click', () => {
+                        let val = parseInt(input.value);
+                        input.value = val + 1;
+                        updateCartTotals();
+                    });
+                }
+                
+                removeBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        gsap.to(item, { opacity: 0, x: -20, duration: 0.3, onComplete: () => {
+                            gsap.to(item, { height: 0, padding: 0, margin: 0, border: 'none', duration: 0.3, onComplete: () => {
+                                item.remove();
+                                const remaining = document.querySelectorAll('.cart-item');
+                                if(remaining.length === 0) {
+                                    document.getElementById('cart-form').innerHTML = '<div class="text-center w-full py-20 flex flex-col items-center"><i class="ph ph-shopping-bag text-6xl text-gray-300 mb-6"></i><h2 class="text-2xl font-serif mb-4 text-black">Your cart is empty</h2><p class="text-gray-500 mb-8">Looks like you haven\'t added any luxury items to your cart yet.</p><a href="shop.html" class="px-8 py-4 bg-black text-white text-[12px] font-bold uppercase tracking-widest hover:bg-[#C7A86D] transition-colors rounded-sm">Discover Collections</a></div>';
+                                    const bagCount = document.querySelector('.ph-bag + span');
+                                    if(bagCount) bagCount.innerText = "0";
+                                } else {
+                                    updateCartTotals();
+                                }
+                            }});
+                        }});
+                    });
+                });
+            });
+            
+            // GSAP Entrance Animation
+            gsap.fromTo('.cart-item', 
+                { opacity: 0, y: 20 },
+                { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', delay: 0.1 }
+            );
+            gsap.fromTo('.bg-\\[\\#f9f9f9\\]',
+                { opacity: 0, x: 20 },
+                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 }
+            );
+        });
+    </script>
+</body>
+
+</html>
