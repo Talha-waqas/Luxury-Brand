@@ -12,34 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function initGSAP() {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Initial Entrance Animation
-    const tl = gsap.timeline();
+    // Removed Entrance Animation as requested
 
-    // Header slides down
-    tl.from("#header-wrapper", {
-        y: -150,
-        opacity: 0,
-        duration: 1.2,
-        ease: "power3.out"
-    });
-
-    // Logo gentle reveal
-    tl.from(".logo-text", {
-        opacity: 0,
-        scale: 0.95,
-        duration: 1.5,
-        ease: "power2.out"
-    }, "-=0.8");
-
-    // Nav links fade in staggered
-    tl.from(".nav-item", {
-        y: 10,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.1,
-        ease: "power2.out",
-        clearProps: "transform,opacity"
-    }, "-=1.2");
 
     // Sticky Header Scroll Shadow
     const headerWrapper = document.getElementById('header-wrapper');
