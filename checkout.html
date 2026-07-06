@@ -217,173 +217,249 @@
     <!-- MAIN CONTENT -->
     <main class="min-h-[60vh] bg-white">
         
-        <!-- Cart Header -->
+        <!-- Checkout Header -->
         <section class="bg-gray-50/50 py-12 border-b border-gray-100">
             <div class="max-w-container mx-auto px-4 flex flex-col items-center text-center">
-                <h1 class="text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 text-black font-light">Shopping Cart</h1>
+                <h1 class="text-3xl md:text-5xl font-serif tracking-widest uppercase mb-4 text-black font-light">Checkout</h1>
                 <nav class="text-[11px] md:text-xs font-medium tracking-widest uppercase text-gray-500 flex items-center gap-2">
                     <a href="index.html" class="hover:text-black transition-colors">Home</a>
                     <span>/</span>
-                    <span class="text-black">Cart</span>
+                    <a href="cart.html" class="hover:text-black transition-colors">Cart</a>
+                    <span>/</span>
+                    <span class="text-black">Checkout</span>
                 </nav>
             </div>
         </section>
 
-        <!-- Cart Section -->
+        <!-- Checkout Form Section -->
         <section class="max-w-container mx-auto px-4 py-16">
-            <form id="cart-form" class="flex flex-col lg:flex-row gap-12 lg:gap-16">
+            <form id="checkout-form" class="flex flex-col lg:flex-row gap-12 lg:gap-20 relative">
                 
-                <!-- Left: Cart Items -->
-                <div class="flex-1 w-full">
-                    <!-- Cart Header (Desktop) -->
-                    <div class="hidden md:grid grid-cols-12 gap-4 pb-4 border-b border-black text-[10px] tracking-[0.2em] font-bold uppercase text-gray-400">
-                        <div class="col-span-6">Product</div>
-                        <div class="col-span-2 text-center">Quantity</div>
-                        <div class="col-span-3 text-right">Total</div>
-                        <div class="col-span-1"></div>
+                <!-- Left: Billing Details -->
+                <div class="flex-1 w-full checkout-left">
+                    <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-8 text-black border-b border-black pb-4">Billing Details</h2>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">First Name *</label>
+                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Last Name *</label>
+                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-col mb-6">
+                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Company Name (Optional)</label>
+                        <input type="text" class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                    </div>
+                    
+                    <div class="flex flex-col mb-6 relative">
+                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Country / Region *</label>
+                        <select required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent appearance-none cursor-pointer">
+                            <option value="">Select a country...</option>
+                            <option value="PK">Pakistan</option>
+                            <option value="US">United States</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="AE">United Arab Emirates</option>
+                        </select>
+                        <i class="ph ph-caret-down absolute right-2 top-9 text-gray-500 pointer-events-none"></i>
+                    </div>
+                    
+                    <div class="flex flex-col mb-6">
+                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Street Address *</label>
+                        <input type="text" placeholder="House number and street name" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent mb-4 placeholder-gray-300">
+                        <input type="text" placeholder="Apartment, suite, unit, etc. (optional)" class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent placeholder-gray-300">
+                    </div>
+                    
+                    <div class="flex flex-col mb-6">
+                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Town / City *</label>
+                        <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">State / County *</label>
+                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Postcode / ZIP *</label>
+                            <input type="text" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Phone *</label>
+                            <input type="tel" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
+                        <div class="flex flex-col">
+                            <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Email Address *</label>
+                            <input type="email" required class="border-b border-gray-300 py-3 px-2 text-sm focus:outline-none focus:border-black transition-colors bg-transparent">
+                        </div>
                     </div>
 
-                    <!-- Cart Item 1 -->
-                    <div class="cart-item py-6 md:py-8 border-b border-gray-100 grid grid-cols-[90px_1fr] md:grid-cols-12 gap-x-4 gap-y-2 md:gap-y-0 items-center relative group">
-                        <!-- Mobile Remove Button -->
-                        <button type="button" class="remove-btn md:hidden absolute top-4 right-0 text-gray-400 hover:text-red-500 transition-colors p-2 z-10"><i class="ph ph-trash text-lg"></i></button>
+                    <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-6 text-black border-b border-black pb-4">Additional Information</h2>
+                    <div class="flex flex-col mb-6">
+                        <label class="text-[11px] tracking-widest uppercase text-gray-500 mb-2">Order Notes (Optional)</label>
+                        <textarea placeholder="Notes about your order, e.g. special notes for delivery." rows="4" class="border border-gray-300 p-4 text-sm focus:outline-none focus:border-black transition-colors bg-transparent resize-none placeholder-gray-300"></textarea>
+                    </div>
 
-                        <!-- Image -->
-                        <div class="col-span-1 row-span-2 md:row-span-1 md:col-span-2 h-full flex items-center">
-                            <a href="#" class="w-full h-[120px] md:h-36 flex-shrink-0 bg-gray-50 rounded-sm overflow-hidden block">
-                                <img src="./images/luxury_pret_1783285387396.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
-                            </a>
-                        </div>
+                </div>
 
-                        <!-- Details -->
-                        <div class="col-span-1 md:col-span-4 flex flex-col justify-start py-1">
-                            <span class="text-[9px] md:text-[10px] text-brand-gold tracking-widest uppercase font-bold mb-1">Luxury Pret</span>
-                            <a href="#" class="text-[14px] md:text-lg font-medium text-black hover:text-gray-500 transition-colors pr-8 md:pr-0 mb-1 leading-tight">Midnight Silk Suit</a>
-                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1">Size: <span class="text-black font-medium">M</span></p>
-                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1 md:mb-0">Fabric: <span class="text-black font-medium">Silk</span></p>
-                            <div class="hidden item-price">18,990</div>
-                        </div>
-
-                        <!-- Price & Quantity -->
-                        <div class="col-start-2 md:col-start-7 col-span-1 md:col-span-2 flex flex-row md:flex-col justify-between md:justify-center items-center mt-auto md:mt-0">
-                            <!-- Mobile Price -->
-                            <p class="md:hidden text-[14px] font-medium">Rs. 18,990</p>
+                <!-- Right: Order Summary & Payment -->
+                <div class="w-full lg:w-[450px] flex-shrink-0 checkout-right">
+                    <div class="bg-[#f9f9f9] p-8 lg:p-10 sticky top-[120px]">
+                        <h2 class="text-xl md:text-2xl font-serif tracking-widest uppercase mb-8 text-black border-b border-gray-200 pb-4">Your Order</h2>
+                        
+                        <!-- Order Items Table -->
+                        <div class="mb-8">
+                            <div class="flex justify-between text-[10px] tracking-[0.2em] font-bold uppercase text-gray-400 mb-4 pb-2 border-b border-gray-200">
+                                <span>Product</span>
+                                <span>Subtotal</span>
+                            </div>
                             
-                            <!-- Quantity -->
-                            <div class="flex items-center border border-gray-200 rounded-sm h-8 md:h-10 w-[90px] md:w-[110px]">
-                                <button type="button" class="qty-btn minus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-minus text-xs md:text-base"></i></button>
-                                <input type="number" value="1" min="1" class="qty-input w-1/3 h-full text-center text-xs md:text-[13px] font-medium bg-transparent focus:outline-none" readonly>
-                                <button type="button" class="qty-btn plus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-plus text-xs md:text-base"></i></button>
+                            <!-- Item 1 -->
+                            <div class="flex justify-between items-center py-4 border-b border-gray-100">
+                                <div class="flex gap-4 items-center">
+                                    <div class="w-12 h-16 bg-gray-200 rounded-sm overflow-hidden flex-shrink-0">
+                                        <img src="./images/luxury_pret_1783285387396.png" class="w-full h-full object-cover">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-medium text-black line-clamp-1">Midnight Silk Suit</span>
+                                        <span class="text-[11px] text-gray-500">Qty: 1</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-medium">Rs. 18,990</span>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="flex justify-between items-center py-4 border-b border-gray-100">
+                                <div class="flex gap-4 items-center">
+                                    <div class="w-12 h-16 bg-gray-200 rounded-sm overflow-hidden flex-shrink-0">
+                                        <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover object-top">
+                                    </div>
+                                    <div class="flex flex-col">
+                                        <span class="text-sm font-medium text-black line-clamp-1">Pastel Silver Couture</span>
+                                        <span class="text-[11px] text-gray-500">Qty: 1</span>
+                                    </div>
+                                </div>
+                                <span class="text-sm font-medium">Rs. 320,000</span>
                             </div>
                         </div>
 
-                        <!-- Total (Desktop) -->
-                        <div class="hidden md:flex col-span-3 justify-end">
-                            <p class="text-base font-medium">Rs. <span class="item-total">18,990</span></p>
-                        </div>
-
-                        <!-- Remove Button (Desktop) -->
-                        <div class="hidden md:flex col-span-1 justify-end">
-                            <button type="button" class="remove-btn text-gray-400 hover:text-red-500 transition-colors p-2"><i class="ph ph-trash text-xl"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Cart Item 2 -->
-                    <div class="cart-item py-6 md:py-8 border-b border-gray-100 grid grid-cols-[90px_1fr] md:grid-cols-12 gap-x-4 gap-y-2 md:gap-y-0 items-center relative group">
-                        <button type="button" class="remove-btn md:hidden absolute top-4 right-0 text-gray-400 hover:text-red-500 transition-colors p-2 z-10"><i class="ph ph-trash text-lg"></i></button>
-
-                        <div class="col-span-1 row-span-2 md:row-span-1 md:col-span-2 h-full flex items-center">
-                            <a href="#" class="w-full h-[120px] md:h-36 flex-shrink-0 bg-gray-50 rounded-sm overflow-hidden block">
-                                <img src="./images/pakistani_bridal_1783255548960.png" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 object-top">
-                            </a>
-                        </div>
-
-                        <div class="col-span-1 md:col-span-4 flex flex-col justify-start py-1">
-                            <span class="text-[9px] md:text-[10px] text-brand-gold tracking-widest uppercase font-bold mb-1">Bridal</span>
-                            <a href="#" class="text-[14px] md:text-lg font-medium text-black hover:text-gray-500 transition-colors pr-8 md:pr-0 mb-1 leading-tight">Pastel Silver Anarkali</a>
-                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1">Size: <span class="text-black font-medium">Custom</span></p>
-                            <p class="text-[11px] md:text-[13px] text-gray-500 mb-1 md:mb-0">Fabric: <span class="text-black font-medium">Net/Silk</span></p>
-                            <div class="hidden item-price">45,000</div>
-                        </div>
-
-                        <div class="col-start-2 md:col-start-7 col-span-1 md:col-span-2 flex flex-row md:flex-col justify-between md:justify-center items-center mt-auto md:mt-0">
-                            <p class="md:hidden text-[14px] font-medium">Rs. 45,000</p>
-                            <div class="flex items-center border border-gray-200 rounded-sm h-8 md:h-10 w-[90px] md:w-[110px]">
-                                <button type="button" class="qty-btn minus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-minus text-xs md:text-base"></i></button>
-                                <input type="number" value="1" min="1" class="qty-input w-1/3 h-full text-center text-xs md:text-[13px] font-medium bg-transparent focus:outline-none" readonly>
-                                <button type="button" class="qty-btn plus w-1/3 h-full flex items-center justify-center text-gray-500 hover:text-black hover:bg-gray-50 transition-colors"><i class="ph ph-plus text-xs md:text-base"></i></button>
+                        <!-- Totals -->
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Subtotal</span>
+                                <span>Rs. 338,990</span>
+                            </div>
+                            <div class="flex justify-between text-sm text-gray-600">
+                                <span>Shipping</span>
+                                <span>Free Shipping</span>
+                            </div>
+                            <div class="flex justify-between text-xl font-serif text-black pt-4 border-t border-black">
+                                <span>Total</span>
+                                <span>Rs. 338,990</span>
                             </div>
                         </div>
 
-                        <div class="hidden md:flex col-span-3 justify-end">
-                            <p class="text-base font-medium">Rs. <span class="item-total">45,000</span></p>
-                        </div>
-
-                        <div class="hidden md:flex col-span-1 justify-end">
-                            <button type="button" class="remove-btn text-gray-400 hover:text-red-500 transition-colors p-2"><i class="ph ph-trash text-xl"></i></button>
-                        </div>
-                    </div>
-
-                    <!-- Continue Shopping -->
-                    <div class="mt-8 pb-12 lg:pb-0">
-                        <a href="shop.html" class="inline-flex items-center gap-2 text-[11px] uppercase tracking-widest font-bold text-gray-500 hover:text-black transition-colors">
-                            <i class="ph ph-arrow-left text-lg"></i> Continue Shopping
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Right: Order Summary (WordPress/WooCommerce friendly sidebar structure) -->
-                <div class="w-full lg:w-[380px] flex-shrink-0 relative">
-                    <div class="bg-[#f9f9f9] p-8 rounded-[8px] lg:sticky lg:top-[120px] border border-gray-100">
-                        <h2 class="text-lg font-serif tracking-widest uppercase mb-6 text-black border-b border-gray-200 pb-4">Order Summary</h2>
-                        
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between items-center text-[14px]">
-                                <span class="text-gray-500">Subtotal</span>
-                                <span class="font-medium text-black">Rs. <span id="cart-subtotal">63,990</span></span>
+                        <!-- Payment Methods -->
+                        <div class="mb-8 space-y-4">
+                            <div class="payment-method border border-black p-4 rounded-sm cursor-pointer transition-colors bg-white">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="radio" name="payment_method" value="bacs" checked class="accent-[#C7A86D] w-4 h-4">
+                                    <span class="text-sm font-bold uppercase tracking-wider">Direct Bank Transfer</span>
+                                </label>
+                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed">
+                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                                </div>
                             </div>
-                            <div class="flex justify-between items-center text-[14px]">
-                                <span class="text-gray-500">Shipping</span>
-                                <span class="font-medium text-black">Calculated at next step</span>
+                            
+                            <div class="payment-method border border-gray-200 p-4 rounded-sm cursor-pointer hover:border-gray-400 transition-colors">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="radio" name="payment_method" value="cod" class="accent-[#C7A86D] w-4 h-4">
+                                    <span class="text-sm font-bold uppercase tracking-wider">Cash on Delivery</span>
+                                </label>
+                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed hidden">
+                                    Pay with cash upon delivery.
+                                </div>
                             </div>
-                        </div>
 
-                        <!-- Promo Code -->
-                        <div class="mb-8 pt-6 border-t border-gray-200">
-                            <p class="text-[11px] font-bold uppercase tracking-widest mb-3 text-black">Gift Card / Promo Code</p>
-                            <div class="flex gap-0">
-                                <input type="text" placeholder="Enter code" class="flex-1 border border-gray-200 px-4 py-3 text-[13px] focus:outline-none focus:border-black transition-colors rounded-l-sm bg-white">
-                                <button type="button" class="px-6 py-3 bg-black text-white text-[11px] uppercase tracking-widest font-bold hover:bg-[#C7A86D] transition-colors rounded-r-sm">Apply</button>
+                            <div class="payment-method border border-gray-200 p-4 rounded-sm cursor-pointer hover:border-gray-400 transition-colors">
+                                <label class="flex items-center gap-3 cursor-pointer">
+                                    <input type="radio" name="payment_method" value="stripe" class="accent-[#C7A86D] w-4 h-4">
+                                    <span class="text-sm font-bold uppercase tracking-wider">Credit Card (Stripe)</span>
+                                </label>
+                                <div class="payment-desc text-[11px] text-gray-500 mt-2 leading-relaxed hidden">
+                                    Pay securely using your credit or debit card.
+                                </div>
                             </div>
                         </div>
 
-                        <!-- Grand Total -->
-                        <div class="pt-6 border-t border-black mb-8 flex justify-between items-end">
-                            <span class="text-base font-bold uppercase tracking-wider text-black">Total</span>
-                            <span class="text-3xl font-serif text-black font-medium">Rs. <span id="cart-total">63,990</span></span>
-                        </div>
+                        <!-- Legal -->
+                        <p class="text-[10px] text-gray-500 mb-8 leading-relaxed">
+                            Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <a href="#" class="text-black underline">privacy policy</a>.
+                        </p>
 
-                        <p class="text-[11px] text-gray-500 mb-6 text-center">Taxes and shipping calculated at checkout.</p>
-                        
-                        <a href="checkout.html" class="w-full bg-black text-white py-4 text-[12px] font-bold uppercase tracking-widest hover:bg-[#C7A86D] transition-colors rounded-sm flex items-center justify-center gap-2">
-                            Proceed to Checkout <i class="ph ph-arrow-right text-lg"></i>
-                        </a>
-                        
-                        <!-- Trust Badges -->
-                        <div class="mt-6 flex items-center justify-center gap-4 text-gray-400">
-                            <i class="ph ph-lock-key text-xl"></i>
-                            <i class="ph ph-shield-check text-xl"></i>
-                            <i class="ph ph-credit-card text-xl"></i>
-                        </div>
+                        <!-- Submit -->
+                        <button type="submit" class="w-full bg-black text-white py-4 text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-[#C7A86D] transition-colors rounded-sm shadow-lg">
+                            Place Order
+                        </button>
+
                     </div>
                 </div>
-
             </form>
         </section>
-
     </main>
 
-    <!-- WP: Footer -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Payment Methods Toggle Logic
+            const paymentMethods = document.querySelectorAll('.payment-method');
+            paymentMethods.forEach(method => {
+                const radio = method.querySelector('input[type="radio"]');
+                
+                // Click anywhere on the box checks the radio
+                method.addEventListener('click', (e) => {
+                    if (e.target !== radio) {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change', { bubbles: true }));
+                    }
+                });
+            });
+
+            document.querySelectorAll('input[name="payment_method"]').forEach(radio => {
+                radio.addEventListener('change', (e) => {
+                    // Reset all
+                    document.querySelectorAll('.payment-method').forEach(method => {
+                        method.classList.remove('border-black', 'bg-white');
+                        method.classList.add('border-gray-200');
+                        method.querySelector('.payment-desc').classList.add('hidden');
+                    });
+
+                    // Set active
+                    const activeMethod = e.target.closest('.payment-method');
+                    activeMethod.classList.remove('border-gray-200');
+                    activeMethod.classList.add('border-black', 'bg-white');
+                    activeMethod.querySelector('.payment-desc').classList.remove('hidden');
+                });
+            });
+
+            // GSAP Entrance Animations
+            gsap.fromTo('.checkout-left', 
+                { opacity: 0, x: -20 },
+                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.1 }
+            );
+            gsap.fromTo('.checkout-right',
+                { opacity: 0, x: 20 },
+                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 }
+            );
+        });
+    </script>
+
+<!-- WP: Footer -->
     <footer class="pt-16 text-sm bg-white">
         <div class="max-w-container mx-auto px-4">
             <!-- Newsletter Row -->
@@ -462,94 +538,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="./script.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            // Cart Interactions
-            const cartItems = document.querySelectorAll('.cart-item');
-            const subtotalEl = document.getElementById('cart-subtotal');
-            const totalEl = document.getElementById('cart-total');
-
-            function updateCartTotals() {
-                let subtotal = 0;
-                let activeItemsCount = 0;
-                
-                document.querySelectorAll('.cart-item').forEach(item => {
-                    activeItemsCount++;
-                    const priceEl = item.querySelector('.item-price');
-                    if(priceEl) {
-                        const priceText = priceEl.innerText.replace(/[^0-9]/g, '');
-                        const price = parseInt(priceText) || 0;
-                        const qty = parseInt(item.querySelector('.qty-input').value) || 1;
-                        const total = price * qty;
-                        
-                        // Update item total
-                        const itemTotalEls = item.querySelectorAll('.item-total');
-                        itemTotalEls.forEach(el => el.innerText = total.toLocaleString('en-IN'));
-                        
-                        subtotal += total;
-                    }
-                });
-
-                if(subtotalEl) subtotalEl.innerText = subtotal.toLocaleString('en-IN');
-                if(totalEl) totalEl.innerText = subtotal.toLocaleString('en-IN');
-                
-                // Update header bag count
-                const bagCount = document.querySelector('.ph-bag + span');
-                if(bagCount) bagCount.innerText = activeItemsCount;
-            }
-
-            cartItems.forEach(item => {
-                const minusBtn = item.querySelector('.minus');
-                const plusBtn = item.querySelector('.plus');
-                const input = item.querySelector('.qty-input');
-                const removeBtns = item.querySelectorAll('.remove-btn');
-
-                if(minusBtn && plusBtn && input) {
-                    minusBtn.addEventListener('click', () => {
-                        let val = parseInt(input.value);
-                        if(val > 1) {
-                            input.value = val - 1;
-                            updateCartTotals();
-                        }
-                    });
-
-                    plusBtn.addEventListener('click', () => {
-                        let val = parseInt(input.value);
-                        input.value = val + 1;
-                        updateCartTotals();
-                    });
-                }
-                
-                removeBtns.forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        gsap.to(item, { opacity: 0, x: -20, duration: 0.3, onComplete: () => {
-                            gsap.to(item, { height: 0, padding: 0, margin: 0, border: 'none', duration: 0.3, onComplete: () => {
-                                item.remove();
-                                const remaining = document.querySelectorAll('.cart-item');
-                                if(remaining.length === 0) {
-                                    document.getElementById('cart-form').innerHTML = '<div class="text-center w-full py-20 flex flex-col items-center"><i class="ph ph-shopping-bag text-6xl text-gray-300 mb-6"></i><h2 class="text-2xl font-serif mb-4 text-black">Your cart is empty</h2><p class="text-gray-500 mb-8">Looks like you haven\'t added any luxury items to your cart yet.</p><a href="shop.html" class="px-8 py-4 bg-black text-white text-[12px] font-bold uppercase tracking-widest hover:bg-[#C7A86D] transition-colors rounded-sm">Discover Collections</a></div>';
-                                    const bagCount = document.querySelector('.ph-bag + span');
-                                    if(bagCount) bagCount.innerText = "0";
-                                } else {
-                                    updateCartTotals();
-                                }
-                            }});
-                        }});
-                    });
-                });
-            });
-            
-            // GSAP Entrance Animation
-            gsap.fromTo('.cart-item', 
-                { opacity: 0, y: 20 },
-                { opacity: 1, y: 0, duration: 0.8, stagger: 0.15, ease: 'power3.out', delay: 0.1 }
-            );
-            gsap.fromTo('.bg-\\[\\#f9f9f9\\]',
-                { opacity: 0, x: 20 },
-                { opacity: 1, x: 0, duration: 0.8, ease: 'power3.out', delay: 0.3 }
-            );
-        });
-    </script>
+    
 </body>
 
 </html>
